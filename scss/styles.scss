@@ -31,19 +31,26 @@ header {
   justify-content: space-between;
   background-color: theme.blur-gray(0.2);
   backdrop-filter: blur(1000px);
+  height: 1.6rem;
+  width: 100%;
 
   .menu,
   .utility {
     display: flex;
+    align-items: center;
     list-style-type: none;
-    color: theme.$text-black;
+    color: theme.$text-white;
     padding: 0.1rem 0.7rem;
+    font-size: 0.9rem;
     &__item {
-      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
       padding-right: 0.7rem;
-      img {
-        width: 1rem;
-        height: 1rem;
+
+      &__logo {
+        // transform: scale(0.6);
+        width: 0.8rem;
+        height: auto;
       }
     }
   }
