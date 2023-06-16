@@ -26,23 +26,28 @@ header {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(1000px);
+  height: 1.6rem;
+  width: 100%;
 }
 header .menu,
 header .utility {
   display: flex;
+  align-items: center;
   list-style-type: none;
-  color: #161616;
+  color: #fff;
   padding: 0.1rem 0.7rem;
+  font-size: 0.9rem;
 }
 header .menu__item,
 header .utility__item {
-  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
   padding-right: 0.7rem;
 }
-header .menu__item img,
-header .utility__item img {
-  width: 1rem;
-  height: 1rem;
+header .menu__item__logo,
+header .utility__item__logo {
+  width: 0.8rem;
+  height: auto;
 }
 
 .dock {
