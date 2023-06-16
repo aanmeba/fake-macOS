@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "San Francisco", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+.background img {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1000px);
+}
+header .menu,
+header .utility {
+  display: flex;
+  list-style-type: none;
+  color: #161616;
+  padding: 0.1rem 0.7rem;
+}
+header .menu__item,
+header .utility__item {
+  font-size: 0.9rem;
+  padding-right: 0.7rem;
+}
+header .menu__item img,
+header .utility__item img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dock {
+  width: auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  left: 25%;
+  border: 1px solid rgba(119, 119, 119, 0.5);
+  border-radius: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1000px);
+}
+.dock__list {
+  margin: 0.3rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.dock__list__item img {
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 5;
+  margin: 0.1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

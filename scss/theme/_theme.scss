@@ -1,0 +1,7 @@
+$text-black: #161616;
+$text-white: #fff;
+
+$border-gray: rgba(119, 119, 119, 0.5);
+@function blur-gray($opacity: 0.5) {
+  @return rgba(255, 255, 255, $opacity);
+}
