@@ -1,5 +1,9 @@
 @use "./theme/theme" as theme;
 
+// :root {
+//   --scale: 1;
+// }
+
 * {
   margin: 0;
   padding: 0;
@@ -67,18 +71,37 @@ header {
   border-radius: 1.3rem;
   background-color: theme.blur-gray(0.3);
   backdrop-filter: blur(1000px);
-  &__list {
+
+  &__container {
     margin: 0.3rem;
     list-style-type: none;
     display: flex;
     justify-content: center;
-    &__item {
-      img {
-        width: 3.5rem;
-        height: 3.5rem;
-        z-index: 5;
-        margin: 0.1rem;
-      }
+    align-items: center;
+
+    // &__item {
+    //   width: 4rem;
+    //   height: 4rem;
+    //   --scale: 1;
+    //   margin: 1rem;
+
+    &__ico {
+      --scale: 1;
+
+      width: 4rem;
+      height: 4rem;
+
+      position: relative;
+
+      transform: scale(calc(6rem * var(--scale)));
+      padding: 0 0.5rem;
+      cursor: default;
+
+      top: calc((6rem * var(--scale) - 6rem) / 2 * -1);
+
+      // transition: 0.2s;
+      transition: all 0.3s ease-out;
     }
+    // }
   }
 }

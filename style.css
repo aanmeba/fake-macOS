@@ -62,17 +62,23 @@ header .utility__item__logo {
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(1000px);
 }
-.dock__list {
+.dock__container {
   margin: 0.3rem;
   list-style-type: none;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.dock__list__item img {
-  width: 3.5rem;
-  height: 3.5rem;
-  z-index: 5;
-  margin: 0.1rem;
+.dock__container__ico {
+  --scale: 1;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  transform: scale(calc(6rem * var(--scale)));
+  padding: 0 0.5rem;
+  cursor: default;
+  top: calc((6rem * var(--scale) - 6rem) / 2 * -1);
+  transition: all 0.3s ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */
