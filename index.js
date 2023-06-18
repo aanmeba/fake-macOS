@@ -113,3 +113,15 @@ function resetScale() {
 //     icons[index - 1].style.transform = "scale(1)";
 //   });
 // });
+
+// check which icon in the dock is clicked
+// - icons variable - __ico
+const apps = document.querySelectorAll(".dock__container__item__active");
+
+console.log(apps);
+apps.forEach((app) => {
+  app.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("clicked working app");
+  });
+});
