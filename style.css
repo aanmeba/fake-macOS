@@ -69,16 +69,79 @@ header .utility__item__logo {
   justify-content: center;
   align-items: center;
 }
-.dock__container__ico {
-  --scale: 1;
+.dock__container__item {
   width: 4rem;
   height: 4rem;
+  margin: 0 0.14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dock__container__item .name {
+  visibility: hidden;
+  position: absolute;
+  width: max-content;
+  top: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  padding: 0.2rem 0.9rem;
+  border-radius: 0.2rem;
+}
+.dock__container__item .name::after {
+  content: "";
+  position: absolute;
+  bottom: -0.45rem;
+  width: 0;
+  height: 0;
+  backdrop-filter: blur(13px);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.45rem solid rgba(255, 255, 255, 0.5);
+}
+.dock__container__item__ico {
+  width: 4rem;
+  height: 4rem;
+  transition: 0.2s;
   position: relative;
-  transform: scale(calc(6rem * var(--scale)));
-  padding: 0 0.5rem;
-  cursor: default;
-  top: calc((6rem * var(--scale) - 6rem) / 2 * -1);
-  transition: all 0.3s ease-out;
+}
+
+.li-1:hover .name {
+  visibility: visible !important;
+}
+
+.li-2:hover .name {
+  visibility: visible !important;
+}
+
+.li-3:hover .name {
+  visibility: visible !important;
+}
+
+.li-4:hover .name {
+  visibility: visible !important;
+}
+
+.li-5:hover .name {
+  visibility: visible !important;
+}
+
+.li-6:hover .name {
+  visibility: visible !important;
+}
+
+.li-7:hover .name {
+  visibility: visible !important;
+}
+
+.li-8:hover .name {
+  visibility: visible !important;
+}
+
+.li-9:hover .name {
+  visibility: visible !important;
 }
 
 /*# sourceMappingURL=style.css.map */
