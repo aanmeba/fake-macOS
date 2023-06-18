@@ -82,11 +82,13 @@ header {
     &__item {
       width: 4rem;
       height: 4rem;
-      // --scale: 1;
       margin: 0 0.14rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      // --scale: 1;
+
+      // 🔥 to give hovering effect, it should be a separate class ??
 
       .name {
         visibility: hidden;
@@ -137,35 +139,9 @@ header {
 }
 
 @for $i from 1 through 9 {
-  // .dock__container:nth-child(n + #{$i}) {
-  //   &:hover {
-  //     background-color: yellow;
-  //     &__item {
-  //       &__name {
-  //         visibility: visible;
-  //         background-color: red !important;
-  //       }
-  //     }
-  //   }
-  // }
-
-  // .dock__container__item:nth-of-type(#{$i}) {
-  //   &:hover {
-  //     background-color: yellow;
-
-  //     &__ico {
-  //       visibility: hidden;
-  //     }
-  //     // &__name {
-  //     //   visibility: visible;
-  //     //   background-color: red !important;
-  //     // }
-  //   }
-  // }
-
-  .li-#{$i}:hover {
+  .dock__container__item:nth-of-type(#{$i}):hover {
     .name {
-      visibility: visible !important;
+      visibility: visible;
     }
   }
 }
