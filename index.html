@@ -12,6 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <script src="./index.js" defer type="module"></script>
+
     <title>macOS Monterey</title>
   </head>
   <body>
@@ -45,70 +46,153 @@
     </header>
 
     <div class="dock">
-      <ul class="dock__list">
-        <li class="dock__list__item">
+      <ul class="dock__container">
+        <li class="dock__container__item">
+          <div class="dock__container__item__name">Finder</div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/finder.png"
             alt="finder"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div class="dock__container__item__name">Notes</div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/notes.png"
             alt="notes"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item working">
+          <div
+            class="dock__container__item__name dock__container__item__active"
+          >
+            Photo Boot
+          </div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/photo-booth.png"
             alt="photo-booth"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div
+            class="dock__container__item__name dock__container__item__active"
+          >
+            Calculator
+          </div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/calculator.png"
             alt="calculator"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div class="dock__container__item__name">Terminal</div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/terminal.png"
             alt="terminal"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div
+            class="dock__container__item__name dock__container__item__active"
+          >
+            Preview
+          </div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/preview.png"
             alt="preview"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div class="dock__container__item__name">Safari</div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/safari.png"
             alt="safari"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div class="dock__container__item__name">System Preferences</div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/system-preferences.png"
             alt="system-preferences"
           />
         </li>
-        <li class="dock__list__item">
+        <li class="dock__container__item">
+          <div class="dock__container__item__name">Reminders</div>
+
           <img
-            class="dock__list__item__img"
+            class="dock__container__item__ico"
             src="./icons/reminders.png"
             alt="reminders"
           />
         </li>
+
+        <!-- Working on the magnification effect
+          - to use the .previousElementSibling & .nextElementSibling
+         -->
+        <!-- <img
+          class="dock__container__ico"
+          src="./icons/finder.png"
+          alt="finder"
+        />
+
+        <img class="dock__container__ico" src="./icons/notes.png" alt="notes" />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/photo-booth.png"
+          alt="photo-booth"
+        />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/calculator.png"
+          alt="calculator"
+        />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/terminal.png"
+          alt="terminal"
+        />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/preview.png"
+          alt="preview"
+        />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/safari.png"
+          alt="safari"
+        />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/system-preferences.png"
+          alt="system-preferences"
+        />
+
+        <img
+          class="dock__container__ico"
+          src="./icons/reminders.png"
+          alt="reminders"
+        /> -->
       </ul>
     </div>
 

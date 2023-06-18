@@ -62,17 +62,86 @@ header .utility__item__logo {
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(1000px);
 }
-.dock__list {
+.dock__container {
   margin: 0.3rem;
   list-style-type: none;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.dock__list__item img {
-  width: 3.5rem;
-  height: 3.5rem;
-  z-index: 5;
-  margin: 0.1rem;
+.dock__container__item {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 0.14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dock__container__item__name {
+  visibility: hidden;
+  position: absolute;
+  width: max-content;
+  top: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  padding: 0.2rem 0.9rem;
+  border-radius: 0.2rem;
+}
+.dock__container__item__name::after {
+  content: "";
+  position: absolute;
+  bottom: -0.45rem;
+  width: 0;
+  height: 0;
+  backdrop-filter: blur(13px);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.45rem solid rgba(255, 255, 255, 0.5);
+}
+.dock__container__item__ico {
+  width: 4rem;
+  height: 4rem;
+  transition: 0.2s;
+  position: relative;
+}
+
+.dock__container__item:nth-of-type(1):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(2):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(3):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(4):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(5):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(6):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(7):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(8):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(9):hover .dock__container__item__name {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */
