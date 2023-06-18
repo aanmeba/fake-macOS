@@ -47,7 +47,7 @@
 
     <div class="dock">
       <ul class="dock__container">
-        <li class="dock__container__item">
+        <li class="dock__container__item" id="finder">
           <div class="dock__container__item__name">Finder</div>
 
           <img
@@ -56,7 +56,7 @@
             alt="finder"
           />
         </li>
-        <li class="dock__container__item">
+        <li class="dock__container__item" id="notes">
           <div class="dock__container__item__name">Notes</div>
 
           <img
@@ -65,12 +65,11 @@
             alt="notes"
           />
         </li>
-        <li class="dock__container__item working">
-          <div
-            class="dock__container__item__name dock__container__item__active"
-          >
-            Photo Boot
-          </div>
+        <li
+          class="dock__container__item dock__container__item__active"
+          id="photo-booth"
+        >
+          <div class="dock__container__item__name">Photo Boot</div>
 
           <img
             class="dock__container__item__ico"
@@ -78,12 +77,11 @@
             alt="photo-booth"
           />
         </li>
-        <li class="dock__container__item">
-          <div
-            class="dock__container__item__name dock__container__item__active"
-          >
-            Calculator
-          </div>
+        <li
+          class="dock__container__item dock__container__item__active"
+          id="calculator"
+        >
+          <div class="dock__container__item__name">Calculator</div>
 
           <img
             class="dock__container__item__ico"
@@ -91,7 +89,7 @@
             alt="calculator"
           />
         </li>
-        <li class="dock__container__item">
+        <li class="dock__container__item" id="terminal">
           <div class="dock__container__item__name">Terminal</div>
 
           <img
@@ -100,12 +98,11 @@
             alt="terminal"
           />
         </li>
-        <li class="dock__container__item">
-          <div
-            class="dock__container__item__name dock__container__item__active"
-          >
-            Preview
-          </div>
+        <li
+          class="dock__container__item dock__container__item__active"
+          id="preview"
+        >
+          <div class="dock__container__item__name">Preview</div>
 
           <img
             class="dock__container__item__ico"
@@ -113,7 +110,7 @@
             alt="preview"
           />
         </li>
-        <li class="dock__container__item">
+        <li class="dock__container__item" id="safari">
           <div class="dock__container__item__name">Safari</div>
 
           <img
@@ -122,7 +119,7 @@
             alt="safari"
           />
         </li>
-        <li class="dock__container__item">
+        <li class="dock__container__item" id="system-preferences">
           <div class="dock__container__item__name">System Preferences</div>
 
           <img
@@ -131,7 +128,7 @@
             alt="system-preferences"
           />
         </li>
-        <li class="dock__container__item">
+        <li class="dock__container__item" id="reminders">
           <div class="dock__container__item__name">Reminders</div>
 
           <img
@@ -195,7 +192,16 @@
         /> -->
       </ul>
     </div>
-
+    <!-- for layout and test -->
+    <div class="modal">
+      <div class="tab">
+        <ul class="tab__buttons">
+          <li id="closeBtn"></li>
+          <li id="minBtn"></li>
+          <li id="maxBtn"></li>
+        </ul>
+      </div>
+    </div>
     <div class="background">
       <img src="./img/bg.png" alt="background image" />
     </div>

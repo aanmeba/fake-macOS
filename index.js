@@ -122,6 +122,16 @@ console.log(apps);
 apps.forEach((app) => {
   app.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("clicked working app");
+    const target = e.currentTarget;
+    console.log(target.id); // to open a corresponding app
+
+    createEl("div", "", document.querySelector("body"), "modal");
   });
+});
+
+const closeBtn = document.querySelector("#closeBtn");
+closeBtn.addEventListener("click", () => {
+  console.log("clicked closeBTN");
+  const openedModal = document.querySelector(".modal");
+  openedModal.classList.remove("modal");
 });
