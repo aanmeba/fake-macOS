@@ -77,7 +77,7 @@ header .utility__item__logo {
   justify-content: center;
   align-items: center;
 }
-.dock__container__item .name {
+.dock__container__item__name {
   visibility: hidden;
   position: absolute;
   width: max-content;
@@ -90,7 +90,7 @@ header .utility__item__logo {
   padding: 0.2rem 0.9rem;
   border-radius: 0.2rem;
 }
-.dock__container__item .name::after {
+.dock__container__item__name::after {
   content: "";
   position: absolute;
   bottom: -0.45rem;
@@ -108,39 +108,39 @@ header .utility__item__logo {
   position: relative;
 }
 
-.dock__container__item:nth-of-type(1):hover .name {
+.dock__container__item:nth-of-type(1):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(2):hover .name {
+.dock__container__item:nth-of-type(2):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(3):hover .name {
+.dock__container__item:nth-of-type(3):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(4):hover .name {
+.dock__container__item:nth-of-type(4):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(5):hover .name {
+.dock__container__item:nth-of-type(5):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(6):hover .name {
+.dock__container__item:nth-of-type(6):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(7):hover .name {
+.dock__container__item:nth-of-type(7):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(8):hover .name {
+.dock__container__item:nth-of-type(8):hover .dock__container__item__name {
   visibility: visible;
 }
 
-.dock__container__item:nth-of-type(9):hover .name {
+.dock__container__item:nth-of-type(9):hover .dock__container__item__name {
   visibility: visible;
 }
 

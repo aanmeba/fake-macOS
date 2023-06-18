@@ -88,9 +88,7 @@ header {
       align-items: center;
       // --scale: 1;
 
-      // 🔥 to give hovering effect, it should be a separate class ??
-
-      .name {
+      &__name {
         visibility: hidden;
         position: absolute;
         width: max-content;
@@ -138,10 +136,9 @@ header {
   }
 }
 
+// controlling visibility in js might be better ??
 @for $i from 1 through 9 {
-  .dock__container__item:nth-of-type(#{$i}):hover {
-    .name {
-      visibility: visible;
-    }
+  .dock__container__item:nth-of-type(#{$i}):hover .dock__container__item__name {
+    visibility: visible;
   }
 }
