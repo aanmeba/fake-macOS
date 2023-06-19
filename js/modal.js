@@ -1,6 +1,9 @@
 import { appendCh, createEl } from "./utilities/dom.js";
 
-export const createModal = () => {
+export const openedApps = [];
+
+export const createModal = (app) => {
+  if (!openedApps.includes(app)) openedApps.push(app);
   console.log("createModal function is triggered");
   const modal = createEl("div", "", "modal");
   const tab = createEl("div", "", "tab");
@@ -25,12 +28,15 @@ export const createModal = () => {
   appendCh(content, document.querySelector(".modal"));
 };
 
-export const closeModal = () => {
+export const closeModal = (app) => {
   const closeBtn = document.querySelector("#closeBtn");
   closeBtn?.addEventListener("click", () => {
     console.log("clicked closeBTN");
     const openedModal = document.querySelector(".modal");
     openedModal.remove();
+
+    // openedApps - update state
+    if (openedApps.length !== 0) openedApps.filter((el) => el !== app);
   });
 };
 

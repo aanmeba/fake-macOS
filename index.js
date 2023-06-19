@@ -1,4 +1,4 @@
-import { createModal, closeModal } from "./js/modal.js";
+import { createModal, closeModal, openedApps } from "./js/modal.js";
 import { runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
 // current time
@@ -126,16 +126,18 @@ console.log(apps);
 apps.forEach((app) => {
   app.addEventListener("click", (e) => {
     e.preventDefault();
-    const target = e.currentTarget;
-    console.log(target.id); // to open a corresponding app
+    const { id } = e.currentTarget;
+    console.log(id); // to open a corresponding app
 
-    createModal();
-    closeModal();
+    if (!openedApps.includes(id)) createModal(id);
+    closeModal(id);
 
-    runPhotoBooth();
-    appendCh(
-      document.querySelector("video"),
-      document.querySelector("#modalContent")
-    );
+    if (id === "photoBooth") {
+      runPhotoBooth();
+      appendCh(
+        document.querySelector("video"),
+        document.querySelector("#modalContent")
+      );
+    }
   });
 });
