@@ -109,21 +109,24 @@ header .utility__item__logo {
 }
 
 .modal {
-  width: 300px;
-  height: 300px;
   background-color: white;
   box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.13);
   border-radius: 0.5rem;
+  width: 600px;
+  height: 450px;
   position: absolute;
   top: 40px;
   left: 40px;
   transition: 0.2s;
-  --tabcolor: transparent;
+  overflow: hidden;
 }
 .modal .tab {
-  background-color: var(--tabcolor);
+  background-color: #eae5ed;
+  border-bottom: 1px solid #ded9e0;
   width: 100%;
   height: 1.5rem;
+  z-index: 1;
+  position: absolute;
 }
 .modal .tab__buttons {
   list-style-type: none;
@@ -131,19 +134,24 @@ header .utility__item__logo {
   padding: 0.3rem;
 }
 .modal .tab__buttons li {
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.75rem;
+  height: 0.75rem;
   margin-right: 0.5rem;
   border-radius: 50%;
 }
 .modal .tab__buttons li:nth-of-type(1) {
-  background-color: #ff605c;
+  background-color: #ff5151;
 }
 .modal .tab__buttons li:nth-of-type(2) {
-  background-color: #ffbd44;
+  background-color: #feb63d;
 }
 .modal .tab__buttons li:nth-of-type(3) {
-  background-color: #00ca4e;
+  background-color: #00c644;
+}
+.modal__content {
+  width: fit-content;
+  height: fit-content;
+  background-color: lightcoral;
 }
 
 .dock__container__item:nth-of-type(1):hover .dock__container__item__name {
@@ -180,6 +188,33 @@ header .utility__item__logo {
 
 .dock__container__item:nth-of-type(9):hover .dock__container__item__name {
   visibility: visible;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.photo--menu {
+  background-color: #eae5ed;
+  border-top: 1px solid #ded9e0;
+  width: 100%;
+  height: 3.5rem;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo--menu__btn {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1px solid #ded9e0;
+  background-color: #f7232b;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

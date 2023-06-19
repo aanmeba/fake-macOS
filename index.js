@@ -1,4 +1,5 @@
 import { createModal, closeModal } from "./js/modal.js";
+import { runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
 // current time
 // 🔥 Fix: setTimeout or setInterval to update the time regularly
@@ -130,5 +131,11 @@ apps.forEach((app) => {
 
     createModal();
     closeModal();
+
+    runPhotoBooth();
+    appendCh(
+      document.querySelector("video"),
+      document.querySelector("#modalContent")
+    );
   });
 });

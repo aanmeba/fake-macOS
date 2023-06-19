@@ -1,8 +1,10 @@
 export const createEl = (el, content, className) => {
   const newEl = document.createElement(el);
-  const newNode = document.createTextNode(content ?? content);
+  if (content) {
+    const newNode = document.createTextNode(content);
+    newEl.appendChild(newNode);
+  }
   className && newEl.classList.add(className);
-  newEl.appendChild(newNode);
   return newEl;
 };
 
