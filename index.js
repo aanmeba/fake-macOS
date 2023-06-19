@@ -1,4 +1,5 @@
-import { createEl } from "./js/utilities/dom.js";
+import { createModal, closeModal } from "./js/modal.js";
+import { appendCh, createEl } from "./js/utilities/dom.js";
 // current time
 // 🔥 Fix: setTimeout or setInterval to update the time regularly
 const utility = document.querySelector(".utility");
@@ -13,8 +14,10 @@ const time = new Date()
   .join(":");
 
 setTimeout(() => {}, 1000);
-createEl("p", date, utilityItems[utilityItems.length - 2]);
-createEl("p", time, utilityItems[utilityItems.length - 1]);
+const dateEl = createEl("p", date);
+const timeEl = createEl("p", time);
+appendCh(dateEl, utilityItems[utilityItems.length - 2]);
+appendCh(timeEl, utilityItems[utilityItems.length - 1]);
 
 // when hovering,
 // 1. scale up the icon -> css &:hover pseudo class
@@ -125,13 +128,7 @@ apps.forEach((app) => {
     const target = e.currentTarget;
     console.log(target.id); // to open a corresponding app
 
-    createEl("div", "", document.querySelector("body"), "modal");
+    createModal();
+    closeModal();
   });
-});
-
-const closeBtn = document.querySelector("#closeBtn");
-closeBtn.addEventListener("click", () => {
-  console.log("clicked closeBTN");
-  const openedModal = document.querySelector(".modal");
-  openedModal.classList.remove("modal");
 });
