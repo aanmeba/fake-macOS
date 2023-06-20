@@ -1,5 +1,16 @@
 $text-black: #161616;
 $text-white: #fff;
+$text-menu: #241c21;
+$dock-dot: rgb(0, 0, 93);
+
+// modal
+$modal-tab: #eae5ed;
+$modal-bottom: #ded9e0;
+$modal-close-btn: #ff5151;
+$modal-min-btn: #feb63d;
+$modal-max-btn: #00c644;
+
+$video-btn: #f7232b;
 
 $border-gray: rgba(119, 119, 119, 0.5);
 @function blur-gray($opacity: 0.5) {

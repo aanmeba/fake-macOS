@@ -1,0 +1,61 @@
+@use "../theme/theme" as theme;
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.photo {
+  &--menu {
+    background-color: theme.$modal-tab;
+    border-top: 1px solid theme.$modal-bottom;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btn {
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      border: 1px solid theme.$modal-bottom;
+      background-color: theme.$video-btn;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &__stop {
+        width: 1rem;
+        height: 1rem;
+        background-color: theme.$text-white;
+        border-radius: 0.1rem;
+      }
+      &__start {
+        // width: 1rem;
+        // height: 1rem;
+        // background-color: theme.$text-white;
+        // &::after {
+        // content: "";
+        // position: absolute;
+        // bottom: -0.45rem;
+        // backdrop-filter: blur(13px);
+        border-radius: 0.1rem;
+        width: 0;
+        height: 0;
+        margin-left: 0.3rem;
+        border-top: 0.8rem solid transparent;
+        border-bottom: 0.8rem solid transparent;
+        border-left: 1.3rem solid theme.$text-white;
+        // }
+      }
+    }
+  }
+}
