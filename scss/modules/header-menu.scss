@@ -1,0 +1,31 @@
+@use "../theme/theme" as theme;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: theme.blur-gray(0.2);
+  backdrop-filter: blur(1000px);
+  height: 1.6rem;
+  width: 100%;
+
+  .menu,
+  .utility {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    color: theme.$text-white;
+    padding: 0.1rem 0.7rem;
+    font-size: 0.9rem;
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 0.7rem;
+
+      &__logo {
+        // transform: scale(0.6);
+        width: 0.8rem;
+        height: auto;
+      }
+    }
+  }
+}

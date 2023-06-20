@@ -1,55 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "San Francisco", -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
-.background img {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(1000px);
-  height: 1.6rem;
-  width: 100%;
-}
-header .menu,
-header .utility {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  color: #fff;
-  padding: 0.1rem 0.7rem;
-  font-size: 0.9rem;
-}
-header .menu__item,
-header .utility__item {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 0.7rem;
-}
-header .menu__item__logo,
-header .utility__item__logo {
-  width: 0.8rem;
-  height: auto;
-}
-
 .dock {
   width: auto;
   position: absolute;
@@ -108,6 +56,42 @@ header .utility__item__logo {
   position: relative;
 }
 
+.dock__container__item:nth-of-type(1):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(2):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(3):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(4):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(5):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(6):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(7):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(8):hover .dock__container__item__name {
+  visibility: visible;
+}
+
+.dock__container__item:nth-of-type(9):hover .dock__container__item__name {
+  visibility: visible;
+}
+
 .modal {
   background-color: white;
   box-shadow: 10px 10px 20px -2px rgba(0, 0, 0, 0.13);
@@ -154,40 +138,33 @@ header .utility__item__logo {
   background-color: lightcoral;
 }
 
-.dock__container__item:nth-of-type(1):hover .dock__container__item__name {
-  visibility: visible;
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1000px);
+  height: 1.6rem;
+  width: 100%;
 }
-
-.dock__container__item:nth-of-type(2):hover .dock__container__item__name {
-  visibility: visible;
+header .menu,
+header .utility {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  color: #fff;
+  padding: 0.1rem 0.7rem;
+  font-size: 0.9rem;
 }
-
-.dock__container__item:nth-of-type(3):hover .dock__container__item__name {
-  visibility: visible;
+header .menu__item,
+header .utility__item {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0.7rem;
 }
-
-.dock__container__item:nth-of-type(4):hover .dock__container__item__name {
-  visibility: visible;
-}
-
-.dock__container__item:nth-of-type(5):hover .dock__container__item__name {
-  visibility: visible;
-}
-
-.dock__container__item:nth-of-type(6):hover .dock__container__item__name {
-  visibility: visible;
-}
-
-.dock__container__item:nth-of-type(7):hover .dock__container__item__name {
-  visibility: visible;
-}
-
-.dock__container__item:nth-of-type(8):hover .dock__container__item__name {
-  visibility: visible;
-}
-
-.dock__container__item:nth-of-type(9):hover .dock__container__item__name {
-  visibility: visible;
+header .menu__item__logo,
+header .utility__item__logo {
+  width: 0.8rem;
+  height: auto;
 }
 
 video {
@@ -215,6 +192,48 @@ video {
   border: 1px solid #ded9e0;
   background-color: #f7232b;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.photo--menu__btn__stop {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 0.1rem;
+}
+.photo--menu__btn__start {
+  border-radius: 0.1rem;
+  width: 0;
+  height: 0;
+  margin-left: 0.3rem;
+  border-top: 0.8rem solid transparent;
+  border-bottom: 0.8rem solid transparent;
+  border-left: 1.3rem solid #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "San Francisco", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+.background img {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
 /*# sourceMappingURL=style.css.map */
