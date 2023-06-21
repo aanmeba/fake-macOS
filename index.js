@@ -1,3 +1,4 @@
+import { createCalculatorEl, runCalculator } from "./js/calculator.js";
 import { createModal, closeModal, openedApps } from "./js/modal.js";
 import { runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
@@ -138,6 +139,11 @@ apps.forEach((app) => {
         document.querySelector("video"),
         document.querySelector("#modalContent")
       );
+    }
+
+    if (id === "calculator") {
+      createCalculatorEl();
+      runCalculator();
     }
   });
 });

@@ -14,8 +14,8 @@ export const runPhotoBooth = async () => {
   const videoIcon = createEl("div", "", "photo--menu__btn__stop");
   videoIcon.setAttribute("id", "videoIcon");
 
-  appendCh(video, document.querySelector(".modal"));
-  appendCh(bottomMenu, document.querySelector(".modal"));
+  appendCh(video, document.querySelector(".modal--photoBooth"));
+  appendCh(bottomMenu, document.querySelector(".modal--photoBooth"));
   appendCh(btn, document.querySelector(".photo--menu"));
   appendCh(videoIcon, document.querySelector(".photo--menu__btn"));
 

@@ -4,7 +4,11 @@ export const createEl = (el, content, className) => {
     const newNode = document.createTextNode(content);
     newEl.appendChild(newNode);
   }
-  className && newEl.classList.add(className);
+  if (className) {
+    className.includes(" ")
+      ? className.split(" ").forEach((c) => newEl.classList.add(c))
+      : className && newEl.classList.add(className);
+  }
   return newEl;
 };
 
