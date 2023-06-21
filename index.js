@@ -1,7 +1,8 @@
 import { createCalculatorEl, runCalculator } from "./js/calculator.js";
 import { createModal, closeModal, openedApps } from "./js/modal.js";
-import { runPhotoBooth } from "./js/photo_booth.js";
+import { createPhotoBoothEl, runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
+import { closeDropdown, createDropDown } from "./js/menu_dropdown.js";
 // current time
 // 🔥 Fix: setTimeout or setInterval to update the time regularly
 const utility = document.querySelector(".utility");
@@ -128,22 +129,39 @@ apps.forEach((app) => {
   app.addEventListener("click", (e) => {
     e.preventDefault();
     const { id } = e.currentTarget;
-    console.log(id); // to open a corresponding app
 
-    if (!openedApps.includes(id)) createModal(id);
-    closeModal(id);
+    if (!openedApps.includes(id)) {
+      createModal(id);
+      closeModal(id);
 
-    if (id === "photoBooth") {
-      runPhotoBooth();
-      appendCh(
-        document.querySelector("video"),
-        document.querySelector("#modalContent")
-      );
-    }
+      if (id === "photoBooth") {
+        createPhotoBoothEl();
+        runPhotoBooth();
+      }
 
-    if (id === "calculator") {
-      createCalculatorEl();
-      runCalculator();
+      if (id === "calculator") {
+        createCalculatorEl();
+        runCalculator();
+      }
     }
   });
+});
+
+let isDropdownOpen = false;
+const apple = document.querySelector(".menu__item"); // first menu__item
+
+apple.addEventListener("click", () => {
+  if (!isDropdownOpen) {
+    createDropDown();
+    isDropdownOpen = true;
+  }
+  console.log(isDropdownOpen, "-- isDropdownOen?");
+});
+
+const background = document.querySelector(".background");
+background.addEventListener("click", () => {
+  if (isDropdownOpen) {
+    closeDropdown();
+    isDropdownOpen = false;
+  }
 });
