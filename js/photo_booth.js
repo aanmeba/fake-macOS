@@ -14,7 +14,7 @@ export const createPhotoBoothEl = () => {
   const videoIcon = createEl("div", "", "photo--menu__btn__stop");
   videoIcon.setAttribute("id", "videoIcon");
 
-  appendCh(video, document.querySelector(".modal--photoBooth"));
+  appendCh(video, document.querySelector(".modal--photoBooth__content"));
   appendCh(bottomMenu, document.querySelector(".modal--photoBooth"));
   appendCh(btn, document.querySelector(".photo--menu"));
   appendCh(videoIcon, document.querySelector(".photo--menu__btn"));

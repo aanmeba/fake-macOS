@@ -135,10 +135,6 @@ apps.forEach((app) => {
 
       if (id === "photoBooth") {
         createPhotoBoothEl();
-        appendCh(
-          document.querySelector("video"),
-          document.querySelector("#modalContent")
-        );
         runPhotoBooth();
       }
 

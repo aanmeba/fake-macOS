@@ -135,7 +135,7 @@ header .utility__item__logo {
   transition: 0.2s;
   overflow: hidden;
 }
-.modal--photoBooth .tab {
+.modal--photoBooth .tab--photoBooth {
   background-color: #eae5ed;
   border-bottom: 1px solid #ded9e0;
   width: 100%;
@@ -143,25 +143,25 @@ header .utility__item__logo {
   z-index: 1;
   position: absolute;
 }
-.modal--photoBooth .tab__buttons {
+.modal--photoBooth .tab--photoBooth__buttons {
   list-style-type: none;
   display: flex;
   padding: 0.3rem;
 }
-.modal--photoBooth .tab__buttons li {
+.modal--photoBooth .tab--photoBooth__buttons li {
   width: 0.65rem;
   height: 0.65rem;
   margin-right: 0.5rem;
   border-radius: 50%;
   border: 0.3px solid rgba(0, 0, 0, 0.5);
 }
-.modal--photoBooth .tab__buttons li:nth-of-type(1) {
+.modal--photoBooth .tab--photoBooth__buttons li:nth-of-type(1) {
   background-color: #ff5151;
 }
-.modal--photoBooth .tab__buttons li:nth-of-type(2) {
+.modal--photoBooth .tab--photoBooth__buttons li:nth-of-type(2) {
   background-color: #feb63d;
 }
-.modal--photoBooth .tab__buttons li:nth-of-type(3) {
+.modal--photoBooth .tab--photoBooth__buttons li:nth-of-type(3) {
   background-color: #00c644;
 }
 .modal--photoBooth__content {
@@ -228,7 +228,7 @@ video {
   transition: 0.2s;
   overflow: hidden;
 }
-.modal--calculator .tab {
+.modal--calculator .tab--calculator {
   background-color: transparent;
   border-bottom: 1px solid transparent;
   width: 100%;
@@ -236,25 +236,25 @@ video {
   z-index: 1;
   position: absolute;
 }
-.modal--calculator .tab__buttons {
+.modal--calculator .tab--calculator__buttons {
   list-style-type: none;
   display: flex;
   padding: 0.3rem;
 }
-.modal--calculator .tab__buttons li {
+.modal--calculator .tab--calculator__buttons li {
   width: 0.65rem;
   height: 0.65rem;
   margin-right: 0.5rem;
   border-radius: 50%;
   border: 0.3px solid rgba(0, 0, 0, 0.5);
 }
-.modal--calculator .tab__buttons li:nth-of-type(1) {
+.modal--calculator .tab--calculator__buttons li:nth-of-type(1) {
   background-color: #ff5151;
 }
-.modal--calculator .tab__buttons li:nth-of-type(2) {
+.modal--calculator .tab--calculator__buttons li:nth-of-type(2) {
   background-color: #feb63d;
 }
-.modal--calculator .tab__buttons li:nth-of-type(3) {
+.modal--calculator .tab--calculator__buttons li:nth-of-type(3) {
   background-color: #00c644;
 }
 .modal--calculator__content {

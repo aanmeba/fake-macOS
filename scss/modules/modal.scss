@@ -26,7 +26,7 @@
 
     overflow: hidden;
 
-    .tab {
+    .tab--#{$className} {
       background-color: $tabColor;
       border-bottom: 1px solid $tabBorder;
       width: 100%;
@@ -38,6 +38,7 @@
         list-style-type: none;
         display: flex;
         padding: 0.3rem;
+
         li {
           width: 0.65rem;
           height: 0.65rem;
@@ -63,3 +64,7 @@
     }
   }
 }
+
+// @function unique-id() {
+//   @return "id-" + random(1000000);
+// }

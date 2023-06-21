@@ -4,13 +4,13 @@ import { appendCh, createEl } from "./utilities/dom.js";
 export const createCalculatorEl = () => {
   console.log("calculator is building...");
 
-  const modalTab = document.querySelector(".tab");
+  const modalTab = document.querySelector(".tab--calculator");
   modalTab.style.backgroundColor = "transparent";
 
   const calculator = createEl("div", "", "calc");
   const displayResult = createEl("div", "0", "calc__display");
   displayResult.setAttribute("id", "displayResult");
-  appendCh(calculator, document.querySelector("#modalContent"));
+  appendCh(calculator, document.querySelector(".modal--calculator__content"));
   appendCh(displayResult, document.querySelector(".calc"));
 
   const clearBtn = createEl("button", "C", "calc__button");
