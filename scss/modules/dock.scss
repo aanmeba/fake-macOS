@@ -29,6 +29,17 @@
       align-items: center;
       // --scale: 1;
 
+      &:nth-of-type(3)::after,
+      &:nth-of-type(4)::after {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: theme.black-opacity(0.8);
+        content: "";
+        bottom: 2px;
+      }
+
       &__name {
         visibility: hidden;
         position: absolute;
