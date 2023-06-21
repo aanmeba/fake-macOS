@@ -1,4 +1,4 @@
-import { createCalculatorEl } from "./js/calculator.js";
+import { createCalculatorEl, runCalculator } from "./js/calculator.js";
 import { createModal, closeModal, openedApps } from "./js/modal.js";
 import { runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
@@ -143,6 +143,7 @@ apps.forEach((app) => {
 
     if (id === "calculator") {
       createCalculatorEl();
+      runCalculator();
     }
   });
 });

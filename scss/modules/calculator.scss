@@ -1,16 +1,12 @@
 @use "../theme/theme" as theme;
 @use "./modal";
 
-$border-radius: 8px;
-$gray: #616366;
-$black: #2d3034;
-$orange: #ff9f09;
-
 @include modal.setModalStyle(
+  "calculator",
   230px,
   320px,
-  50px,
-  200px,
+  250px,
+  500px,
   transparent,
   transparent,
   100%,
@@ -18,17 +14,10 @@ $orange: #ff9f09;
 );
 
 .calc {
-  // position: absolute;
-  // top: 50px;
-  // left: 200px;
   width: 100%;
   height: 100%;
 
-  background-color: $black;
-  border-radius: $border-radius;
-  box-shadow: 0 4px 40px rgba(#292929, 0.2), 0 12px 24px rgba(#292929, 0.2);
-  padding: 1px 1px 1px 0;
-  margin: 0 auto;
+  background-color: theme.$calc-black;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -43,35 +32,45 @@ $orange: #ff9f09;
     "zero zero dot equal";
 
   &__display {
-    background-color: $black;
-    // box-shadow: inset 0 1px 0 rgba(#fff, 0.4);
-    border-radius: $border-radius $border-radius 0 0;
-    padding: 4% 8% 4% 0;
+    background-color: theme.$calc-black;
+    box-shadow: inset 0 1px 0 theme.white-opacity(0.4);
+    border-radius: theme.$border-radius theme.$border-radius 0 0;
+    padding: 0.5rem;
+    height: 4rem;
 
-    color: #fff;
+    color: theme.$text-white;
     font-size: 2.75em;
     font-weight: 300;
     text-align: right;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
   &__button {
-    background-color: $gray;
-    box-shadow: inset 1px 1px 0 $black;
-    color: #fff;
+    background-color: theme.$calc-gray;
+    box-shadow: inset 1px 1px 0 theme.$calc-black;
+    color: theme.$text-white;
     border: none;
     cursor: pointer;
     font-size: 1.3em;
     padding: 0;
 
     &:hover {
-      background-color: lighten($gray, 8%);
+      background-color: lighten(theme.$calc-gray, 8%);
     }
     &:active {
-      background-color: lighten($gray, 16%);
+      background-color: lighten(theme.$calc-gray, 16%);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 
   &__operators {
-    background-color: $orange;
+    background-color: theme.$calc-orange;
   }
 }
 

@@ -7,27 +7,18 @@ export const createCalculatorEl = () => {
   modalTab.style.backgroundColor = "transparent";
 
   const calculator = createEl("div", "", "calc");
-  // const display = createEl("div", "", "calc__display");
   const displayResult = createEl("div", "0", "calc__display");
-  appendCh(calculator, document.querySelector("#modalContent"));
-  // appendCh(display, document.querySelector(".calc"));
-  // appendCh(displayResult, document.querySelector(".calc__display"));
-  appendCh(displayResult, document.querySelector(".calc"));
   displayResult.setAttribute("id", "displayResult");
+  appendCh(calculator, document.querySelector("#modalContent"));
+  appendCh(displayResult, document.querySelector(".calc"));
 
-  // const helpers = createEl("div", "", "calc__helpers");
   const clearBtn = createEl("button", "C", "calc__button");
-  clearBtn.setAttribute("id", "calcClearBtn");
   const deleteBtn = createEl("button", "←", "calc__button");
+  clearBtn.setAttribute("id", "calcClearBtn");
   deleteBtn.setAttribute("id", "calcDeleteBtn");
-
-  // appendCh(helpers, document.querySelector(".calc"));
-  // appendCh(clearBtn, document.querySelector(".calc__helpers"));
-  // appendCh(deleteBtn, document.querySelector(".calc__helpers"));
   appendCh(clearBtn, document.querySelector(".calc"));
   appendCh(deleteBtn, document.querySelector(".calc"));
 
-  // const operations = createEl("div", "", "calc__operations");
   const divide = createEl("button", "÷", "calc__button calc__operators");
   const multiply = createEl("button", "×", "calc__button calc__operators");
   const minus = createEl("button", "-", "calc__button calc__operators");
@@ -38,147 +29,134 @@ export const createCalculatorEl = () => {
   minus.setAttribute("id", "minus");
   plus.setAttribute("id", "plus");
   equal.setAttribute("id", "equal");
-
-  // appendCh(operations, document.querySelector(".calc"));
-  // appendCh(divide, document.querySelector(".calc__operations"));
-  // appendCh(multiply, document.querySelector(".calc__operations"));
-  // appendCh(minus, document.querySelector(".calc__operations"));
-  // appendCh(plus, document.querySelector(".calc__operations"));
-  // appendCh(equal, document.querySelector(".calc__operations"));
   appendCh(divide, document.querySelector(".calc"));
   appendCh(multiply, document.querySelector(".calc"));
   appendCh(minus, document.querySelector(".calc"));
   appendCh(plus, document.querySelector(".calc"));
   appendCh(equal, document.querySelector(".calc"));
 
-  // const numbers = createEl("div", "", "calc__numbers");
-  // appendCh(numbers, document.querySelector(".calc"));
-
-  // const num1 = createEl('button', '1', 'calc__button')
-  // const num2 = createEl('button', '2', 'calc__button')
-  // const num3 = createEl('button', '3', 'calc__button')
-  // const num4 = createEl('button', '4', 'calc__button')
-  // const num5 = createEl('button', '5', 'calc__button')
-  // const num6 = createEl('button', '6', 'calc__button')
-  // const num7 = createEl('button', '7', 'calc__button')
-  // const num8 = createEl('button', '8', 'calc__button')
-  // const num9 = createEl('button', '9', 'calc__button')
-  // const num0 = createEl('button', '0', 'calc__button')
-  // const dot = createEl("button", ".", "calc__button");
-  const dot = createEl("button", ".", "calc__button");
-  appendCh(dot, document.querySelector(".calc"));
+  const dot = createEl("button", ".", "calc__button calc__numbers");
   dot.setAttribute("id", "dot");
+  appendCh(dot, document.querySelector(".calc"));
+
+  deleteBtn.disabled = true;
+  dot.disabled = true;
 
   let nums = [];
   for (let i = 0; i < 10; i++) {
-    const newEl = createEl("button", `${i}`, "calc__button");
+    const newEl = createEl("button", `${i}`, "calc__button calc__numbers");
     newEl.setAttribute("id", `num${i}`);
     nums.push(newEl);
-    // appendCh(newEl, document.querySelector(".calc__numbers"));
     appendCh(newEl, document.querySelector(".calc"));
   }
-  // const [num0, num1, num2, num3, num4, num5, num6, num7, num8, num9] = nums
 };
 
-// <div class="project">
-//   <h1 class="title">Mac Calculator</h1>
-//   <p class="subtitle">Change Sass var $calc-size to adjust overall size
-//   <div class="calc">
-//     <div class="calc-sect-display">
-//       <div class="calc-display">
-//         0
-//       </div>
-//     </div>
-//     <div class="calc-sect-memory">
-//       <button class="calc-button calc-clear">
-//         <span class="calc-button--inner">
-//           C
-//         </span>
-//       </button>
-//       <button class="calc-button calc-delete">
-//         <span class="calc-button--inner">
-//           ←
-//         </span>
-//       </button>
-//     </div>
-//     <div class="calc-sect-operations">
-//       <button class="calc-button calc-divide">
-//         <span class="calc-button--inner">
-//           ÷
-//         </span>
-//       </button>
-//       <button class="calc-button calc-multiply">
-//         <span class="calc-button--inner">
-//           ×
-//         </span>
-//       </button>
-//       <button class="calc-button calc-subtract">
-//         <span class="calc-button--inner">
-//           -
-//         </span>
-//       </button>
-//       <button class="calc-button calc-add">
-//         <span class="calc-button--inner">
-//           +
-//         </span>
-//       </button>
-//       <button class="calc-button calc-equals">
-//         <span class="calc-button--inner">
-//           =
-//         </span>
-//       </button>
-//     </div>
-//     <div class="calc-sect-numbers">
-//       <button class="calc-button calc-num-0">
-//         <span class="calc-button--inner">
-//           0
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-1">
-//         <span class="calc-button--inner">
-//           1
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-2">
-//         <span class="calc-button--inner">
-//           2
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-3">
-//         <span class="calc-button--inner">
-//           3
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-4">
-//         <span class="calc-button--inner">
-//           4
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-5">
-//         <span class="calc-button--inner">
-//           5
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-6">
-//         <span class="calc-button--inner">
-//           6
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-7">
-//         <span class="calc-button--inner">
-//           7
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-8">
-//         <span class="calc-button--inner">
-//           8
-//         </span>
-//       </button>
-//       <button class="calc-button calc-num-9">
-//         <span class="calc-button--inner">
-//           9
-//         </span>
-//       </button>
-//     </div>
-//   </div>
-// </div>
+let currentValue = "0";
+let isCalculating = false;
+let total = 0;
+let operator;
+
+export const runCalculator = () => {
+  // get the input values
+  const calculator = document.querySelector(".calc");
+
+  // add event listener to the parent
+  calculator.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // otherwise, default value of displayResult (0) is sent to the handleBtnClick func
+    if (e.target.id !== "displayResult") {
+      handleBtnClick(e.target.innerText);
+    }
+  });
+};
+
+const handleBtnClick = (value) => {
+  console.log("handleBtnClicked!", value);
+  if (isNaN(+value)) {
+    handleSymbol(value);
+  } else {
+    handleNumber(value);
+  }
+  rerender();
+};
+
+const rerender = () => {
+  const display = document.querySelector("#displayResult");
+  const valueLength = currentValue.length;
+  let size;
+
+  if (!isCalculating) {
+    display.removeAttribute("style");
+  }
+
+  if (valueLength > 9) {
+    size = 30 - valueLength * 0.5;
+    display.style.fontSize = size + "px";
+  }
+  display.innerText = currentValue;
+};
+
+const handleNumber = (value) => {
+  if (!isCalculating) {
+    currentValue = value;
+    isCalculating = true;
+  } else {
+    currentValue += value;
+  }
+};
+
+const handleSymbol = (value) => {
+  switch (value) {
+    case "C":
+      currentValue = "0";
+      isCalculating = false;
+      total = 0;
+      break;
+    case "=":
+      isCalculating = false;
+      handleCalculation(+currentValue);
+      console.log(currentValue, total, typeof total);
+      currentValue = total;
+      total = 0;
+      break;
+    case "←":
+      console.log("not yet ready");
+      break;
+    case "÷":
+    case "×":
+    case "+":
+    case "-":
+      handleMath(value);
+      break;
+  }
+};
+
+const handleMath = (value) => {
+  operator = value;
+
+  if (!total) {
+    total = +currentValue;
+  } else {
+    handleCalculation(+currentValue);
+  }
+
+  isCalculating = false;
+};
+
+const handleCalculation = (num) => {
+  switch (operator) {
+    case "+":
+      total += num;
+      break;
+    case "-":
+      total -= num;
+      break;
+    case "×":
+      total *= num;
+      break;
+    case "÷":
+      total /= num;
+      break;
+  }
+};

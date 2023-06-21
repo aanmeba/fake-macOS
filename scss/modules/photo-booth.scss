@@ -1,7 +1,16 @@
 @use "../theme/theme" as theme;
 @use "./modal";
 
-@include modal.setModalStyle(600px, 450px, 40px, 40px);
+@include modal.setModalStyle("photoBooth");
+//   none,
+//   none,
+//   40px,
+//   40px,
+//   theme.$modal-tab,
+//   theme.$modal-bottom,
+//   fit-content,
+//   fit-content
+// );
 
 video {
   position: absolute;

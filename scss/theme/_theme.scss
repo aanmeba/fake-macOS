@@ -9,11 +9,19 @@ $modal-bottom: #ded9e0;
 $modal-close-btn: #ff5151;
 $modal-min-btn: #feb63d;
 $modal-max-btn: #00c644;
-
+$modal-showdow: rgba(#292929, 0.2);
 $video-btn: #f7232b;
 
-$border-gray: rgba(0, 0, 0, 0.25);
+// calculator
+$border-radius: 8px;
+$calc-gray: #616366;
+$calc-black: #2d3034;
+$calc-orange: #ff9f09;
 
-@function blur-gray($opacity: 0.5) {
+@function black-opacity($opacity: 0.2) {
+  @return rgba(0, 0, 0, $opacity);
+}
+
+@function white-opacity($opacity: 0.5) {
   @return rgba(255, 255, 255, $opacity);
 }

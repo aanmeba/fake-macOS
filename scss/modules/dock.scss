@@ -7,9 +7,10 @@
   justify-content: center;
   bottom: 20px;
   left: 25%;
-  border: 1px solid theme.$border-gray;
+  border: 1px solid theme.black-opacity(0.5);
+  box-shadow: 15px 15px 20px -2px theme.black-opacity(0.13);
   border-radius: 1.3rem;
-  background-color: theme.blur-gray(0.3);
+  background-color: theme.white-opacity(0.3);
   backdrop-filter: blur(1000px);
 
   &__container {
@@ -37,7 +38,7 @@
         justify-content: center;
         align-items: center;
 
-        background-color: theme.blur-gray(0.5);
+        background-color: theme.white-opacity(0.5);
         font-size: 0.9rem;
         padding: 0.2rem 0.9rem;
         border-radius: 0.2rem;
@@ -52,7 +53,7 @@
 
           border-left: 0.4rem solid transparent;
           border-right: 0.4rem solid transparent;
-          border-top: 0.45rem solid theme.blur-gray(0.5);
+          border-top: 0.45rem solid theme.white-opacity(0.5);
         }
       }
 
