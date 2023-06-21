@@ -1,3 +1,4 @@
+import { closeModal } from "./modal.js";
 import { appendCh, createEl } from "./utilities/dom.js";
 
 export const createCalculatorEl = () => {

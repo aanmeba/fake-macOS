@@ -1,6 +1,6 @@
 import { createCalculatorEl, runCalculator } from "./js/calculator.js";
 import { createModal, closeModal, openedApps } from "./js/modal.js";
-import { runPhotoBooth } from "./js/photo_booth.js";
+import { createPhotoBoothEl, runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
 // current time
 // 🔥 Fix: setTimeout or setInterval to update the time regularly
@@ -128,22 +128,24 @@ apps.forEach((app) => {
   app.addEventListener("click", (e) => {
     e.preventDefault();
     const { id } = e.currentTarget;
-    console.log(id); // to open a corresponding app
 
-    if (!openedApps.includes(id)) createModal(id);
-    closeModal(id);
+    if (!openedApps.includes(id)) {
+      createModal(id);
+      closeModal(id);
 
-    if (id === "photoBooth") {
-      runPhotoBooth();
-      appendCh(
-        document.querySelector("video"),
-        document.querySelector("#modalContent")
-      );
-    }
+      if (id === "photoBooth") {
+        createPhotoBoothEl();
+        appendCh(
+          document.querySelector("video"),
+          document.querySelector("#modalContent")
+        );
+        runPhotoBooth();
+      }
 
-    if (id === "calculator") {
-      createCalculatorEl();
-      runCalculator();
+      if (id === "calculator") {
+        createCalculatorEl();
+        runCalculator();
+      }
     }
   });
 });

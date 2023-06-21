@@ -2,7 +2,7 @@ import { appendCh, createEl } from "./utilities/dom.js";
 
 let isCameraWorking = true;
 
-export const runPhotoBooth = async () => {
+export const createPhotoBoothEl = () => {
   console.log("photo booth.... ");
 
   /** create photo booth window */
@@ -18,7 +18,10 @@ export const runPhotoBooth = async () => {
   appendCh(bottomMenu, document.querySelector(".modal--photoBooth"));
   appendCh(btn, document.querySelector(".photo--menu"));
   appendCh(videoIcon, document.querySelector(".photo--menu__btn"));
+};
 
+export const runPhotoBooth = async () => {
+  const video = document.querySelector("video");
   /** run webcam */
   let stream;
   try {
@@ -30,20 +33,59 @@ export const runPhotoBooth = async () => {
 
   /** toggle start / stop buttons */
   const toggleBtn = document.querySelector(".photo--menu__btn");
-
-  toggleBtn.addEventListener("click", () => {
+  const closeModalBtn = document.querySelector("#closeBtn");
+  closeModalBtn.addEventListener("click", () => {
+    console.log("close button clicked");
+    // stopCamera(stream);
     isCameraWorking = !isCameraWorking;
-    toggleVideoButtonClass();
 
     if (stream) {
       const tracks = stream.getTracks();
       tracks.forEach((track) => track.stop());
-      videoElement.srcObject = null;
-
+      video.srcObject = null;
       isCameraWorking = false;
-      toggleVideoButtonClass();
     }
+    toggleVideoButtonClass();
   });
+
+  toggleBtn.addEventListener("click", () => {
+    console.log("toggleBtn button clicked");
+    // stopCamera(stream);
+    // if (stream) {
+    //   const tracks = stream.getTracks();
+    //   tracks.forEach((track) => track.stop());
+    //   videoElement.srcObject = null;
+
+    //   isCameraWorking = false;
+    //   toggleVideoButtonClass();
+    // }
+
+    isCameraWorking = !isCameraWorking;
+
+    if (stream) {
+      const tracks = stream.getTracks();
+      tracks.forEach((track) => track.stop());
+      video.srcObject = null;
+      isCameraWorking = false;
+    }
+    toggleVideoButtonClass();
+  });
+};
+
+const stopCamera = (stream) => {
+  const video = document.querySelector("video");
+  console.log(stream, "--- stream? stopCamera");
+  isCameraWorking = !isCameraWorking;
+
+  if (stream) {
+    const tracks = stream.getTracks();
+    tracks.forEach((track) => track.stop());
+
+    video.srcObject = null;
+
+    isCameraWorking = false;
+  }
+  toggleVideoButtonClass();
 };
 
 const toggleVideoButtonClass = () => {
@@ -56,7 +98,8 @@ const toggleVideoButtonClass = () => {
       videoIcon.classList.remove("photo--menu__btn__start");
     videoIcon.classList.add("photo--menu__btn__stop");
   } else {
-    videoIcon.classList.remove("photo--menu__btn__stop");
+    videoIcon.classList.contains("photo--menu__btn__stop") &&
+      videoIcon.classList.remove("photo--menu__btn__stop");
     videoIcon.classList.add("photo--menu__btn__start");
   }
 };

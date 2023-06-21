@@ -33,7 +33,7 @@ export const closeModal = (app) => {
   closeBtn?.addEventListener("click", () => {
     console.log("clicked closeBTN");
     const openedModal = document.querySelector(`.modal--${app}`);
-    openedModal.remove();
+    openedModal && openedModal.remove();
 
     // openedApps - update state
     if (openedApps.length !== 0) openedApps.filter((el) => el !== app);
