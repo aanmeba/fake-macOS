@@ -2,6 +2,7 @@ import { createCalculatorEl, runCalculator } from "./js/calculator.js";
 import { createModal, closeModal, openedApps } from "./js/modal.js";
 import { createPhotoBoothEl, runPhotoBooth } from "./js/photo_booth.js";
 import { appendCh, createEl } from "./js/utilities/dom.js";
+import { closeDropdown, createDropDown } from "./js/menu_dropdown.js";
 // current time
 // 🔥 Fix: setTimeout or setInterval to update the time regularly
 const utility = document.querySelector(".utility");
@@ -144,4 +145,23 @@ apps.forEach((app) => {
       }
     }
   });
+});
+
+let isDropdownOpen = false;
+const apple = document.querySelector(".menu__item"); // first menu__item
+
+apple.addEventListener("click", () => {
+  if (!isDropdownOpen) {
+    createDropDown();
+    isDropdownOpen = true;
+  }
+  console.log(isDropdownOpen, "-- isDropdownOen?");
+});
+
+const background = document.querySelector(".background");
+background.addEventListener("click", () => {
+  if (isDropdownOpen) {
+    closeDropdown();
+    isDropdownOpen = false;
+  }
 });
