@@ -2,41 +2,57 @@ import { appendCh, createEl } from "./utilities/dom.js";
 
 export const createCalculatorEl = () => {
   console.log("calculator is building...");
-  const calculator = createEl("div", "", "calc");
-  const display = createEl("div", "", "calc__display");
-  const displayResult = createEl("div", "0", "calc__display__result");
-  appendCh(calculator, document.querySelector(".modal"));
-  appendCh(display, document.querySelector(".calc"));
-  appendCh(displayResult, document.querySelector(".calc__display"));
 
-  const helpers = createEl("div", "", "calc__helpers");
+  const modalTab = document.querySelector(".tab");
+  modalTab.style.backgroundColor = "transparent";
+
+  const calculator = createEl("div", "", "calc");
+  // const display = createEl("div", "", "calc__display");
+  const displayResult = createEl("div", "0", "calc__display");
+  appendCh(calculator, document.querySelector("#modalContent"));
+  // appendCh(display, document.querySelector(".calc"));
+  // appendCh(displayResult, document.querySelector(".calc__display"));
+  appendCh(displayResult, document.querySelector(".calc"));
+  displayResult.setAttribute("id", "displayResult");
+
+  // const helpers = createEl("div", "", "calc__helpers");
   const clearBtn = createEl("button", "C", "calc__button");
   clearBtn.setAttribute("id", "calcClearBtn");
   const deleteBtn = createEl("button", "←", "calc__button");
   deleteBtn.setAttribute("id", "calcDeleteBtn");
 
-  appendCh(helpers, document.querySelector(".calc"));
-  appendCh(clearBtn, document.querySelector(".calc__helpers"));
-  appendCh(deleteBtn, document.querySelector(".calc__helpers"));
+  // appendCh(helpers, document.querySelector(".calc"));
+  // appendCh(clearBtn, document.querySelector(".calc__helpers"));
+  // appendCh(deleteBtn, document.querySelector(".calc__helpers"));
+  appendCh(clearBtn, document.querySelector(".calc"));
+  appendCh(deleteBtn, document.querySelector(".calc"));
 
-  const operations = createEl("div", "", "calc__operations");
-  const divide = createEl("button", "÷", "calc__button");
-  const multiply = createEl("button", "×", "calc__button");
-  const minus = createEl("button", "-", "calc__button");
-  const plus = createEl("button", "+", "calc__button");
+  // const operations = createEl("div", "", "calc__operations");
+  const divide = createEl("button", "÷", "calc__button calc__operators");
+  const multiply = createEl("button", "×", "calc__button calc__operators");
+  const minus = createEl("button", "-", "calc__button calc__operators");
+  const plus = createEl("button", "+", "calc__button calc__operators");
+  const equal = createEl("button", "=", "calc__button calc__operators");
   divide.setAttribute("id", "divide");
   multiply.setAttribute("id", "multiply");
   minus.setAttribute("id", "minus");
   plus.setAttribute("id", "plus");
+  equal.setAttribute("id", "equal");
 
-  appendCh(operations, document.querySelector(".calc"));
-  appendCh(divide, document.querySelector(".calc__operations"));
-  appendCh(multiply, document.querySelector(".calc__operations"));
-  appendCh(minus, document.querySelector(".calc__operations"));
-  appendCh(plus, document.querySelector(".calc__operations"));
+  // appendCh(operations, document.querySelector(".calc"));
+  // appendCh(divide, document.querySelector(".calc__operations"));
+  // appendCh(multiply, document.querySelector(".calc__operations"));
+  // appendCh(minus, document.querySelector(".calc__operations"));
+  // appendCh(plus, document.querySelector(".calc__operations"));
+  // appendCh(equal, document.querySelector(".calc__operations"));
+  appendCh(divide, document.querySelector(".calc"));
+  appendCh(multiply, document.querySelector(".calc"));
+  appendCh(minus, document.querySelector(".calc"));
+  appendCh(plus, document.querySelector(".calc"));
+  appendCh(equal, document.querySelector(".calc"));
 
-  const numbers = createEl("div", "", "calc__numbers");
-  appendCh(numbers, document.querySelector(".calc"));
+  // const numbers = createEl("div", "", "calc__numbers");
+  // appendCh(numbers, document.querySelector(".calc"));
 
   // const num1 = createEl('button', '1', 'calc__button')
   // const num2 = createEl('button', '2', 'calc__button')
@@ -48,17 +64,20 @@ export const createCalculatorEl = () => {
   // const num8 = createEl('button', '8', 'calc__button')
   // const num9 = createEl('button', '9', 'calc__button')
   // const num0 = createEl('button', '0', 'calc__button')
+  // const dot = createEl("button", ".", "calc__button");
   const dot = createEl("button", ".", "calc__button");
+  appendCh(dot, document.querySelector(".calc"));
+  dot.setAttribute("id", "dot");
 
   let nums = [];
   for (let i = 0; i < 10; i++) {
     const newEl = createEl("button", `${i}`, "calc__button");
     newEl.setAttribute("id", `num${i}`);
     nums.push(newEl);
-    appendCh(newEl, document.querySelector(".calc__numbers"));
+    // appendCh(newEl, document.querySelector(".calc__numbers"));
+    appendCh(newEl, document.querySelector(".calc"));
   }
   // const [num0, num1, num2, num3, num4, num5, num6, num7, num8, num9] = nums
-  appendCh(dot, document.querySelector(".calc__numbers"));
 };
 
 // <div class="project">

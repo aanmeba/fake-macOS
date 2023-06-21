@@ -1,4 +1,7 @@
 @use "../theme/theme" as theme;
+@use "./modal";
+
+@include modal.setModalStyle(600px, 450px, 40px, 40px);
 
 video {
   position: absolute;
