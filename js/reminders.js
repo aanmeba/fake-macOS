@@ -30,8 +30,6 @@ export const createRemindersEl = () => {
   appendCh(completedIcon, completedWrapper);
   appendCh(completedCounter, completedWrapper);
   appendCh(completedText, completed);
-  // <i class="fa-regular fa-calendar"></i>
-  // <i class="fa-solid fa-inbox"></i>
 
   const header = createEl("div", "", "reminders__header");
   const title = createEl("h1", "Reminders", "reminders__header__title");
@@ -48,16 +46,10 @@ export const createRemindersEl = () => {
   appendCh(todoForm, reminders);
   appendCh(todoListEl, reminders);
   appendCh(todoInput, todoForm);
-
-  // const saveBtn = createEl("button", "Save", "reminders__form__btn");
-  // saveBtn.setAttribute("type", "submit");
-  // appendCh(saveBtn, todoForm);
 };
 
 let todoList = [];
 let completedList = [];
-// let currentCount = 0;
-// let completedCount = 0;
 
 export const runReminders = () => {
   const form = document.querySelector("form");
@@ -110,8 +102,7 @@ const printTodo = (todoObj) => {
     const { target } = e;
     if (target.classList.contains("reminders__list__item__checkBtn")) {
       // console.log("buttonclicked", target.id);
-      // console.log(target.parentNode, target);
-      // console.dir(target);
+
       completeTodo(target.parentNode, target.id);
     }
 

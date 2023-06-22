@@ -23,16 +23,12 @@ const timeEl = createEl("p", time);
 appendCh(dateEl, utilityItems[utilityItems.length - 2]);
 appendCh(timeEl, utilityItems[utilityItems.length - 1]);
 
-// check which icon in the dock is clicked
-// - icons variable - __ico
 const apps = document.querySelectorAll(".dock__container__item__active");
 
-console.log(apps);
 apps.forEach((app) => {
   app.addEventListener("click", (e) => {
     e.preventDefault();
     const { id } = e.currentTarget;
-    console.log(id, "-- app id"); // reminders id doens't exist
 
     if (!openedApps.includes(id)) {
       createModal(id);
