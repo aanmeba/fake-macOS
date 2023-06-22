@@ -1,7 +1,7 @@
 @use "../theme/theme" as theme;
 @use "./modal";
 
-@include modal.setModalStyle("reminders", 500px, 400px, 300px, 300px);
+@include modal.setModalStyle("reminders", 500px, 400px, 200px, 800px);
 
 .modal--reminders {
   display: flex;
@@ -34,7 +34,7 @@
           margin-bottom: 0.3rem;
 
           i {
-            color: white;
+            color: theme.$white;
             padding: 0.3rem;
             border-radius: 50%;
             &.fa-calendar {
@@ -73,7 +73,7 @@
     &__counter,
     &__title {
       font-size: 2rem;
-      color: lightcoral;
+      color: theme.$reminders-title;
     }
 
     &__title {

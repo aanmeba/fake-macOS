@@ -42,17 +42,8 @@ video {
       &__stop {
         width: 1rem;
         height: 1rem;
-        background-color: theme.$text-white;
+        background-color: theme.$white;
         border-radius: 0.1rem;
-      }
-      &__start {
-        border-radius: 0.1rem;
-        width: 0;
-        height: 0;
-        margin-left: 0.3rem;
-        border-top: 0.8rem solid transparent;
-        border-bottom: 0.8rem solid transparent;
-        border-left: 1.3rem solid theme.$text-white;
       }
     }
   }

@@ -6,7 +6,7 @@
   230px,
   320px,
   250px,
-  500px,
+  600px,
   transparent,
   transparent,
   100%,
@@ -38,7 +38,7 @@
     padding: 0.5rem;
     height: 4rem;
 
-    color: theme.$text-white;
+    color: theme.$white;
     font-size: 2.75em;
     font-weight: 300;
     text-align: right;
@@ -50,7 +50,7 @@
   &__button {
     background-color: theme.$calc-gray;
     box-shadow: inset 1px 1px 0 theme.$calc-black;
-    color: theme.$text-white;
+    color: theme.$white;
     border: none;
     cursor: pointer;
     font-size: 1.3em;

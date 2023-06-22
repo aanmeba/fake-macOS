@@ -12,7 +12,7 @@
   $contentHeight: fit-content
 ) {
   .modal--#{$className} {
-    background-color: white;
+    background-color: theme.$white;
     box-shadow: 15px 15px 20px -2px theme.black-opacity(0.13);
     border: 0.3px solid theme.black-opacity(0.5);
     border-radius: 0.5rem;

@@ -1,9 +1,7 @@
-$text-black: #161616;
-$text-white: #fff;
-$text-menu: #241c21;
-$dock-dot: rgb(0, 0, 93);
-$hover-blue: rgb(46, 108, 204);
-$reminders-blue: rgb(52, 123, 246);
+$black: #161616;
+$white: #fff;
+$dock-dot: #00005d;
+$hover-blue: #2e6ccc;
 
 // modal
 $modal-tab: #eae5ed;
@@ -12,7 +10,13 @@ $modal-close-btn: #ff5151;
 $modal-min-btn: #feb63d;
 $modal-max-btn: #00c644;
 $modal-showdow: rgba(#292929, 0.2);
+
+// photo-booth
 $video-btn: #f7232b;
+
+// reminders
+$reminders-blue: #347bf6;
+$reminders-title: lightcoral;
 
 // calculator
 $border-radius: 8px;
