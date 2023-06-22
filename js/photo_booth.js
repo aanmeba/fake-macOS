@@ -18,8 +18,6 @@ export const createPhotoBoothEl = () => {
 };
 
 const stopCamera = async (stream) => {
-  console.log("stopCamera...");
-
   try {
     if (stream) {
       const tracks = await stream.getTracks();

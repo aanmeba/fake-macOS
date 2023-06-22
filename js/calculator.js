@@ -2,8 +2,6 @@ import { closeModal } from "./modal.js";
 import { appendCh, createEl } from "./dom-utils.js";
 
 export const createCalculatorEl = () => {
-  console.log("calculator is building...");
-
   const modalTab = document.querySelector(".tab--calculator");
   modalTab.style.backgroundColor = "transparent";
 
@@ -73,7 +71,6 @@ export const runCalculator = () => {
 };
 
 const handleBtnClick = (value) => {
-  console.log("handleBtnClicked!", value);
   if (isNaN(+value)) {
     handleSymbol(value);
   } else {
@@ -117,7 +114,7 @@ const handleSymbol = (value) => {
     case "=":
       isCalculating = false;
       handleCalculation(+currentValue);
-      console.log(currentValue, total, typeof total);
+
       currentValue = total;
       total = 0;
       break;
