@@ -6,7 +6,9 @@
   display: flex;
   justify-content: center;
   bottom: 20px;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
   border: 1px solid theme.black-opacity(0.5);
   box-shadow: 15px 15px 20px -2px theme.black-opacity(0.13);
   border-radius: 1.3rem;
@@ -27,10 +29,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // --scale: 1;
 
       &:nth-of-type(3)::after,
-      &:nth-of-type(4)::after {
+      &:nth-of-type(4)::after,
+      &:nth-of-type(9)::after {
         position: absolute;
         width: 4px;
         height: 4px;
@@ -69,20 +71,11 @@
       }
 
       &__ico {
-        // --scale: 1;
-
         width: 4rem;
         height: 4rem;
 
         transition: 0.2s;
         position: relative;
-
-        // transform: scale(calc(6rem * var(--scale)));
-        // padding: 0 0.5rem;
-        // cursor: default;
-
-        // top: calc((6rem * var(--scale) - 6rem) / 2 * -1);
-        // transition: all 0.3s ease-out;
       }
     }
   }

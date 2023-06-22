@@ -6,7 +6,7 @@
   230px,
   320px,
   250px,
-  500px,
+  600px,
   transparent,
   transparent,
   100%,
@@ -38,7 +38,7 @@
     padding: 0.5rem;
     height: 4rem;
 
-    color: theme.$text-white;
+    color: theme.$white;
     font-size: 2.75em;
     font-weight: 300;
     text-align: right;
@@ -50,7 +50,7 @@
   &__button {
     background-color: theme.$calc-gray;
     box-shadow: inset 1px 1px 0 theme.$calc-black;
-    color: theme.$text-white;
+    color: theme.$white;
     border: none;
     cursor: pointer;
     font-size: 1.3em;
@@ -132,102 +132,3 @@
 #dot {
   grid-area: dot;
 }
-
-// &__display {
-//   // grid-column: 1 / span 4;
-//   grid-area: display;
-//   width: 100%;
-//   height: 70px;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: flex-end;
-//   background-color: lightblue;
-// }
-
-// &__helpers {
-//   // grid-column: 1 / span 3;
-
-//   background-color: lightcoral;
-//   &:nth-child(1) {
-//     grid-area: reset;
-//     // grid-column: 1 / span 2;
-//     // grid-area: 2/1/3/2;
-//   }
-//   &:nth-child(2) {
-//     grid-area: delete;
-//     // grid-column: 3 / span 1;
-//     // grid-area: 2/2/3/4;
-//   }
-// }
-
-// &__operations {
-//   grid-column: 4 / span 1;
-//   grid-row: 2 / span 6;
-//   display: flex;
-//   flex-direction: column;
-
-//   background-color: lightgreen;
-//   button:nth-of-type(1) {
-//     grid-area: divide;
-//   }
-//   button:nth-of-type(2) {
-//     grid-area: multiply;
-//   }
-//   button:nth-of-type(3) {
-//     grid-area: minus;
-//   }
-//   button:nth-of-type(4) {
-//     grid-area: plus;
-//   }
-//   button:nth-of-type(5) {
-//     grid-area: equal;
-//   }
-// }
-// &__numbers {
-//   // grid-column: 1 / span 3;
-//   // display: flex;
-//   // flex-direction: row-reverse;
-//   // flex-wrap: wrap-reverse;
-//   background-color: lightpink;
-
-//   button:nth-of-type(1) {
-//     grid-area: zero;
-//   }
-//   button:nth-of-type(2) {
-//     grid-area: num1;
-//   }
-//   button:nth-of-type(3) {
-//     grid-area: num2;
-//   }
-//   button:nth-of-type(4) {
-//     grid-area: num3;
-//   }
-//   button:nth-of-type(5) {
-//     grid-area: num4;
-//   }
-//   button:nth-of-type(6) {
-//     grid-area: num5;
-//   }
-//   button:nth-of-type(7) {
-//     grid-area: num6;
-//   }
-//   button:nth-of-type(8) {
-//     grid-area: num7;
-//   }
-//   button:nth-of-type(9) {
-//     grid-area: num8;
-//   }
-//   button:nth-of-type(10) {
-//     grid-area: num9;
-//   }
-//   button:nth-of-type(11) {
-//     grid-area: dot;
-//   }
-// }
-// &__button {
-//   min-width: 57.5px;
-//   height: 50px;
-//   background-color: lightgoldenrodyellow;
-//   border: 1px solid theme.$text-black;
-// }
-// }

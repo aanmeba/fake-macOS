@@ -1,4 +1,4 @@
-import { appendCh, createEl } from "./utilities/dom.js";
+import { appendCh, createEl } from "./dom-utils.js";
 
 export const createDropDown = () => {
   const header = document.querySelector("header");
@@ -25,15 +25,12 @@ export const createDropDown = () => {
     }
     appendCh(newEl, select);
   });
-  console.log(select, "-- select");
 
   header.insertAdjacentElement("afterend", container);
   appendCh(select, container);
 };
 
 export const closeDropdown = () => {
-  console.log("close dropdown");
   const dropdown = document.querySelector(`.dropdown`);
-
   dropdown && dropdown.remove();
 };
