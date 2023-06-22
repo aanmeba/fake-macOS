@@ -8,8 +8,9 @@
   box-sizing: border-box;
 
   .tab--reminders {
-    position: none;
-    // height: 100%;
+    position: relative;
+    height: 100%;
+    width: 200px;
 
     .summary {
       display: flex;
