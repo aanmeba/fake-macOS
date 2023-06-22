@@ -1,10 +1,10 @@
-import { appendCh, createEl } from "./utilities/dom.js";
+import { appendCh, createEl } from "./dom-utils.js";
 
 export let openedApps = [];
 
 export const createModal = (app) => {
   if (!openedApps.includes(app)) openedApps.push(app);
-  console.log("createModal function is triggered");
+
   const modal = createEl("div", "", `modal--${app}`);
   const tab = createEl("div", "", `tab--${app}`);
   const buttons = createEl("ul", "", `tab--${app}__buttons`);
@@ -33,7 +33,6 @@ export const closeModal = (app) => {
   const closeBtn = document.querySelector(`[data-id=${app}]`);
 
   closeBtn?.addEventListener("click", () => {
-    console.log("clicked closeBTN");
     const openedModal = document.querySelector(`.modal--${app}`);
     openedModal && openedModal.remove();
 

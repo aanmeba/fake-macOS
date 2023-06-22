@@ -1,5 +1,5 @@
 import { closeModal } from "./modal.js";
-import { appendCh, createEl } from "./utilities/dom.js";
+import { appendCh, createEl } from "./dom-utils.js";
 
 export const createCalculatorEl = () => {
   console.log("calculator is building...");

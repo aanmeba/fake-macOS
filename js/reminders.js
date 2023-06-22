@@ -1,4 +1,4 @@
-import { appendCh, createEl } from "./utilities/dom.js";
+import { appendCh, createEl } from "./dom-utils.js";
 
 export const createRemindersEl = () => {
   const reminders = createEl("div", "", "reminders");
@@ -74,8 +74,6 @@ const todoCounter = () => {
   const counter = document.querySelector(".reminders__header__counter");
   const todayCounter = document.querySelector("#currentCounter");
   const completedCounter = document.querySelector("#completedCounter");
-
-  console.log("list: ", todoList, completedList);
 
   counter.innerText = todoList.length;
   todayCounter.innerText = todoList.length;

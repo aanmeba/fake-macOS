@@ -20,16 +20,17 @@ header {
 
     &__item {
       display: flex;
-      justify-content: space-between;
-      padding-right: 0.7rem;
-      margin: 0 auto;
+      justify-content: center;
+      margin-right: 0.7rem;
 
       i {
-        transform: scale(1.3);
-        width: 0.8rem;
-        height: auto;
+        transform: scale(1.1);
       }
+    }
+  }
 
+  .menu {
+    &__item {
       &:nth-of-type(1) {
         padding: 0.3rem 0.8rem;
         &:hover,

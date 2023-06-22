@@ -13,5 +13,5 @@ export const createEl = (el, content, className) => {
 };
 
 export const appendCh = (el, parent) => {
-  parent?.appendChild(el);
+  parent.appendChild(el);
 };
