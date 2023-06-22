@@ -1,0 +1,154 @@
+@use "../theme/theme" as theme;
+@use "./modal";
+
+@include modal.setModalStyle("reminders", 500px, 400px, 300px, 300px);
+
+.modal--reminders {
+  display: flex;
+  box-sizing: border-box;
+
+  .tab--reminders {
+    position: none;
+    // height: 100%;
+
+    .summary {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      &__current,
+      &__completed {
+        background-color: theme.black-opacity(0.1);
+        border-radius: 0.6rem;
+        // width: 6rem;
+        // height: 2.5rem;
+        margin: 0 1rem 1rem 1rem;
+        padding: 0.5rem;
+
+        display: flex;
+        flex-direction: column;
+
+        &__wrapper {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.3rem;
+
+          i {
+            color: white;
+            padding: 0.3rem;
+            border-radius: 50%;
+            &.fa-calendar {
+              background-color: theme.$reminders-blue;
+            }
+            &.fa-inbox {
+              background-color: theme.black-opacity(0.6);
+            }
+          }
+
+          h5 {
+            font-size: 1.2rem;
+          }
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+.reminders {
+  width: 320px;
+  height: 100%;
+  margin: 1rem 1rem 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  color: theme.black-opacity(0.7);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__counter,
+    &__title {
+      font-size: 2rem;
+      color: lightcoral;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &__input {
+      padding: 0.5rem;
+      box-sizing: border-box;
+      width: 100%;
+      outline: none;
+      background: none;
+      border: none;
+      border-bottom: 1px solid theme.black-opacity(0.4);
+      color: theme.black-opacity(0.7);
+      font-size: 1rem;
+    }
+
+    // &__btn {
+    //   border: none;
+    //   background-color: transparent;
+    //   color: theme.black-opacity(0.7);
+    // }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type: none;
+
+    height: 250px;
+    overflow-y: scroll;
+
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: flex-start;
+    // align-items: center;
+    margin: 0.5rem 0;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0.3rem 0;
+
+      &__text {
+        // border-bottom: 1px solid black;
+      }
+
+      &__checkBtn {
+        width: 0.8rem;
+        height: 0.8rem;
+
+        background-color: transparent;
+        border: 0.5px solid theme.black-opacity(0.7);
+        // padding: 0.1rem 0.3rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        // cursor: pointer;
+
+        // &:hover {
+        // background-color: aqua;
+        // }
+        &:active {
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
