@@ -1,5 +1,6 @@
 @use "../theme/theme" as theme;
 @use "./modal";
+@use "../mixins";
 
 @include modal.setModalStyle("reminders", 500px, 400px, 200px, 800px);
 
@@ -13,8 +14,7 @@
     width: 200px;
 
     .summary {
-      display: flex;
-      flex-direction: column;
+      @include mixins.flex-column();
       margin-top: 2rem;
 
       &__current,
@@ -25,18 +25,17 @@
         margin: 0 1rem 1rem 1rem;
         padding: 0.5rem;
 
-        display: flex;
-        flex-direction: column;
+        @include mixins.flex-column();
 
         &__wrapper {
-          display: flex;
-          justify-content: space-between;
+          @include mixins.flex-main-space-between();
           margin-bottom: 0.3rem;
 
           i {
             color: theme.$white;
             padding: 0.3rem;
-            border-radius: 50%;
+            border-radius: theme.$border-circle;
+
             &.fa-calendar {
               background-color: theme.$reminders-blue;
             }
@@ -62,13 +61,11 @@
   height: 100%;
   margin: 1rem 1rem 0 1rem;
 
-  display: flex;
-  flex-direction: column;
+  @include mixins.flex-column();
   color: theme.black-opacity(0.7);
 
   &__header {
-    display: flex;
-    justify-content: space-between;
+    @include mixins.flex-main-space-between();
 
     &__counter,
     &__title {
@@ -82,8 +79,7 @@
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex-column();
 
     &__input {
       padding: 0.5rem;
@@ -99,8 +95,7 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
+    @include mixins.flex-column();
     justify-content: flex-start;
 
     list-style-type: none;
@@ -123,7 +118,7 @@
         background-color: transparent;
         border: 0.5px solid theme.black-opacity(0.7);
         margin-right: 1rem;
-        border-radius: 50%;
+        border-radius: theme.$border-circle;
       }
     }
   }

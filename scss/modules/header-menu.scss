@@ -1,8 +1,9 @@
 @use "../theme/theme" as theme;
+@use "../mixins";
 
 header {
-  display: flex;
-  justify-content: space-between;
+  @include mixins.flex-main-space-between();
+
   background-color: theme.white-opacity(0.2);
   backdrop-filter: blur(1000px);
   height: 1.6rem;
