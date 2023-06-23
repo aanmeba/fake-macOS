@@ -1,4 +1,5 @@
 @use "../theme/theme" as theme;
+@use "../mixins";
 
 .dock {
   width: auto;
@@ -9,8 +10,8 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @include mixins.box-shadow();
   border: 1px solid theme.black-opacity(0.5);
-  box-shadow: 15px 15px 20px -2px theme.black-opacity(0.13);
   border-radius: 1.3rem;
   background-color: theme.white-opacity(0.3);
   backdrop-filter: blur(1000px);
@@ -18,17 +19,13 @@
   &__container {
     margin: 0.3rem;
     list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center();
 
     &__item {
       width: 4rem;
       height: 4rem;
       margin: 0 0.14rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include mixins.flex-center();
 
       &:nth-of-type(3)::after,
       &:nth-of-type(4)::after,
@@ -36,7 +33,7 @@
         position: absolute;
         width: 4px;
         height: 4px;
-        border-radius: 50%;
+        border-radius: theme.$border-circle;
         background: theme.black-opacity(0.8);
         content: "";
         bottom: 2px;
@@ -47,9 +44,7 @@
         position: absolute;
         width: max-content;
         top: -40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include mixins.flex-center();
 
         background-color: theme.white-opacity(0.5);
         font-size: 0.9rem;

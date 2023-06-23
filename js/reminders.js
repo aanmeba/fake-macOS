@@ -99,21 +99,8 @@ const printTodo = (todoObj) => {
     e.preventDefault();
     const { target } = e;
     if (target.classList.contains("reminders__list__item__checkBtn")) {
-      // console.log("buttonclicked", target.id);
-
       completeTodo(target.parentNode, target.id);
     }
-
-    // if (
-    //   e.target.classList.contains("reminders__list__item__checkBtn") ||
-    //   e.target.parentNode.classList.contains("reminders__list__item__checkBtn")
-    // ) {
-    //   const btn = e.target.classList.contains("reminders__list__item__checkBtn")
-    //     ? e.target
-    //     : e.target.parentNode;
-    //   console.log("button clicked", btn.id);
-    //   completeTodo(btn.id);
-    // }
   });
 };
 

@@ -1,0 +1,30 @@
+@use "./theme/theme" as theme;
+
+@mixin box-shadow(
+  $x: 15px,
+  $y: 15px,
+  $blur: 20px,
+  $spread: -2px,
+  $color: theme.black-opacity(0.13)
+) {
+  box-shadow: $x $y $blur $spread $color;
+}
+@mixin box-shadow-inset($x, $y, $blur, $color) {
+  box-shadow: inset $x $y $blur $color;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-main-space-between() {
+  display: flex;
+  justify-content: space-between;
+}

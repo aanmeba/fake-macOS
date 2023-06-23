@@ -6,8 +6,8 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 15px 15px 20px -2px rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 1.3rem;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(1000px);
@@ -140,8 +140,8 @@ header .menu__item:nth-of-type(1):hover, header .menu__item:nth-of-type(1):activ
 }
 
 .modal--photoBooth {
-  background-color: #fff;
   box-shadow: 15px 15px 20px -2px rgba(0, 0, 0, 0.13);
+  background-color: #fff;
   border: 0.3px solid rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   width: 600px;
@@ -225,8 +225,8 @@ video {
 }
 
 .modal--calculator {
-  background-color: #fff;
   box-shadow: 15px 15px 20px -2px rgba(0, 0, 0, 0.13);
+  background-color: #fff;
   border: 0.3px solid rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   width: 230px;
@@ -280,8 +280,8 @@ video {
   grid-template-areas: "display display display display" "clear clear delete divide" "num7 num8 num9 multiply" "num4 num5 num6 minus" "num1 num2 num3 plus" "zero zero dot equal";
 }
 .calc__display {
-  background-color: #2d3034;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background-color: #2d3034;
   border-radius: 8px 8px 0 0;
   padding: 0.5rem;
   height: 4rem;
@@ -294,8 +294,8 @@ video {
   justify-content: flex-end;
 }
 .calc__button {
-  background-color: #616366;
   box-shadow: inset 1px 1px 0 #2d3034;
+  background-color: #616366;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -401,11 +401,11 @@ video {
   top: 1.6rem;
   left: 0.7rem;
   padding: 0.5rem;
+  box-shadow: 15px 15px 20px -2px rgba(0, 0, 0, 0.13);
   background-color: rgba(234, 229, 237, 0.7);
   backdrop-filter: blur(5px);
   border-radius: 8px;
   border: 0.3px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 15px 15px 20px -2px rgba(0, 0, 0, 0.13);
   box-sizing: border-box;
 }
 .dropdown__container {
@@ -428,8 +428,8 @@ video {
 }
 
 .modal--reminders {
-  background-color: #fff;
   box-shadow: 15px 15px 20px -2px rgba(0, 0, 0, 0.13);
+  background-color: #fff;
   border: 0.3px solid rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   width: 500px;

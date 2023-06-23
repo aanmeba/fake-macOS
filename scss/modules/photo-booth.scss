@@ -1,5 +1,6 @@
 @use "../theme/theme" as theme;
 @use "./modal";
+@use "../mixins";
 
 @include modal.setModalStyle("photoBooth");
 
@@ -24,19 +25,17 @@ video {
     position: absolute;
     bottom: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center();
 
     &__btn {
       width: 2.6rem;
       height: 2.6rem;
-      border-radius: 50%;
+
+      border-radius: theme.$border-circle;
       border: 1px solid theme.$modal-bottom;
       background-color: theme.$video-btn;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+      @include mixins.flex-center();
       cursor: pointer;
 
       &__stop {
