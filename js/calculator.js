@@ -154,7 +154,7 @@ const handleCalculation = (num) => {
       total *= num;
       break;
     case "÷":
-      total /= num;
+      isFinite((total /= num)) ? (total /= num) : (total = "Not a number");
       break;
   }
 };
