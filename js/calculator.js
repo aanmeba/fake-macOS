@@ -54,6 +54,7 @@ let currentValue = "0";
 let isCalculating = false;
 let total = 0;
 let operator;
+let isOperatorClickedPreviously = false;
 
 export const runCalculator = () => {
   // get the input values
@@ -97,6 +98,7 @@ const rerender = () => {
 };
 
 const handleNumber = (value) => {
+  isOperatorClickedPreviously = false;
   if (!isCalculating) {
     currentValue = value;
     isCalculating = true;
@@ -136,11 +138,12 @@ const handleMath = (value) => {
 
   if (!total) {
     total = +currentValue;
-  } else {
+  } else if (!isOperatorClickedPreviously && isCalculating) {
     handleCalculation(+currentValue);
   }
 
   isCalculating = false;
+  isOperatorClickedPreviously = true;
 };
 
 const handleCalculation = (num) => {
