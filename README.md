@@ -2,6 +2,8 @@
 
 This project is a web-based clone of the **_[MacOS Monterey](<(https://www.apple.com/by/macos/monterey/)>)_** user interface. It is implemented using HTML, SCSS, and JavaScript.
 
+👉 [MacOS Monterey in browser](https://aanmeba.github.io/fake-macOS/)
+
 ## Features
 
 - **Menu Bar**: The menu bar includes the Apple brand icon, which can be hovered over to reveal selectable sub-menus.
