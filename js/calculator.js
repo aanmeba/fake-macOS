@@ -156,7 +156,6 @@ const handleCalculation = (num) => {
       break;
     case "÷":
       isFinite((total /= num)) ? (total /= num) : (total = "Not a number");
-      console.log((total /= num), operator, num, total);
       break;
   }
 };

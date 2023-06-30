@@ -27,6 +27,8 @@ export const createModal = (app) => {
   appendCh(li2, document.querySelector(`.tab--${app}__buttons`));
   appendCh(li3, document.querySelector(`.tab--${app}__buttons`));
   appendCh(content, document.querySelector(`.modal--${app}`));
+
+  makeDraggableEl(app);
 };
 
 export const closeModal = (app) => {
@@ -41,4 +43,34 @@ export const closeModal = (app) => {
       openedApps = openedApps.filter((el) => el !== app);
     }
   });
+};
+
+const makeDraggableEl = (app) => {
+  const modal = document.querySelector(`.modal--${app}`);
+  const tab = modal.querySelector(`.tab--${app}`);
+
+  tab.addEventListener("mousedown", (event) => {
+    let shiftX = event.clientX - modal.getBoundingClientRect().left;
+    let shiftY = event.clientY - modal.getBoundingClientRect().top;
+
+    function moveAt(pageX, pageY) {
+      modal.style.left = pageX - shiftX + "px";
+      modal.style.top = pageY - shiftY + "px";
+    }
+
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+    }
+
+    moveAt(event.pageX, event.pageY);
+
+    document.addEventListener("mousemove", onMouseMove);
+
+    tab.addEventListener("mouseup", () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      tab.onmouseup = null;
+    });
+  });
+
+  tab.addEventListener("dragstart", () => false);
 };
