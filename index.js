@@ -9,6 +9,8 @@ setInterval(getDateTime, 1000);
 
 const apps = document.querySelectorAll(".dock__container__item__active");
 
+// createModal("reminders");
+
 apps.forEach((app) => {
   app.addEventListener("click", (e) => {
     e.preventDefault();

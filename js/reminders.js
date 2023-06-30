@@ -105,13 +105,6 @@ const printTodo = (todoObj) => {
   todoItem.setAttribute("id", todoObj.id);
   checkBtn.setAttribute("id", todoObj.id);
 
-  console.log(
-    "--- create elements --- ",
-    todoItem,
-    todoSpan,
-    checkBtn,
-    todoListEl
-  );
   appendCh(checkBtn, todoItem);
   appendCh(todoSpan, todoItem);
   appendCh(todoItem, todoListEl);

@@ -11,6 +11,8 @@ This project is a web-based clone of the **_[MacOS Monterey](<(https://www.apple
   - **Calculator**: The calculator application provides a user interface with digit buttons for input and supports basic arithmetic operations for calculation.
   - **Reminders**: The reminders application enables users to input reminders and displays them on the screen. It also tracks the total number of to-dos and completed tasks.
 - **Shared Modal Element**: All three applications can be opened and displayed using a shared modal element, providing a consistent user experience.
+- **Draggable Window**: The modal element is draggable, providing users with the ability to move the modal window around the screen.
+- **LocalStorage Integration**: The reminders application utilises the browser's localStorage to store the user's to-do list.
 
 Feel free to explore this project to get a glimpse of the MacOS Monterey user interface implemented in a web-based environment.
 
