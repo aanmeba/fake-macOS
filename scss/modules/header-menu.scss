@@ -1,0 +1,45 @@
+@use "../theme/theme" as theme;
+@use "../mixins";
+
+header {
+  @include mixins.flex-main-space-between();
+
+  background-color: theme.white-opacity(0.2);
+  backdrop-filter: blur(1000px);
+  height: 1.6rem;
+  width: 100%;
+
+  .menu,
+  .utility {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    color: theme.$white;
+    padding: 0.1rem 0.7rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      margin-right: 0.7rem;
+
+      i {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .menu {
+    &__item {
+      &:nth-of-type(1) {
+        padding: 0.3rem 0.8rem;
+        &:hover,
+        &:active {
+          background-color: theme.white-opacity(0.2);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

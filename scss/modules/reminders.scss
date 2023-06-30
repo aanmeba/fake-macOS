@@ -1,0 +1,125 @@
+@use "../theme/theme" as theme;
+@use "./modal";
+@use "../mixins";
+
+@include modal.setModalStyle("reminders", 500px, 400px, 200px, 800px);
+
+.modal--reminders {
+  display: flex;
+  box-sizing: border-box;
+
+  .tab--reminders {
+    position: relative;
+    height: 100%;
+    width: 200px;
+
+    .summary {
+      @include mixins.flex-column();
+      margin-top: 2rem;
+
+      &__current,
+      &__completed {
+        background-color: theme.black-opacity(0.1);
+        border-radius: 0.6rem;
+
+        margin: 0 1rem 1rem 1rem;
+        padding: 0.5rem;
+
+        @include mixins.flex-column();
+
+        &__wrapper {
+          @include mixins.flex-main-space-between();
+          margin-bottom: 0.3rem;
+
+          i {
+            color: theme.$white;
+            padding: 0.3rem;
+            border-radius: theme.$border-circle;
+
+            &.fa-calendar {
+              background-color: theme.$reminders-blue;
+            }
+            &.fa-inbox {
+              background-color: theme.black-opacity(0.6);
+            }
+          }
+
+          h5 {
+            font-size: 1.2rem;
+          }
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+.reminders {
+  width: 320px;
+  height: 100%;
+  margin: 1rem 1rem 0 1rem;
+
+  @include mixins.flex-column();
+  color: theme.black-opacity(0.7);
+
+  &__header {
+    @include mixins.flex-main-space-between();
+
+    &__counter,
+    &__title {
+      font-size: 2rem;
+      color: theme.$reminders-title;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+  }
+
+  &__form {
+    @include mixins.flex-column();
+
+    &__input {
+      padding: 0.5rem;
+      box-sizing: border-box;
+      width: 100%;
+      outline: none;
+      background: none;
+      border: none;
+      border-bottom: 1px solid theme.black-opacity(0.4);
+      color: theme.black-opacity(0.7);
+      font-size: 1rem;
+    }
+  }
+
+  &__list {
+    @include mixins.flex-column();
+    justify-content: flex-start;
+
+    list-style-type: none;
+
+    height: 250px;
+    overflow-y: scroll;
+    margin: 0.5rem 0;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0.3rem 0;
+
+      &__checkBtn {
+        width: 0.8rem;
+        height: 0.8rem;
+
+        background-color: transparent;
+        border: 0.5px solid theme.black-opacity(0.7);
+        margin-right: 1rem;
+        border-radius: theme.$border-circle;
+      }
+    }
+  }
+}

@@ -3,7 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./index.js" defer type="module"></script>
+
+    <title>macOS Monterey</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <ul class="menu">
+        <li class="menu__item">
+          <i class="fa-brands fa-apple"></i>
+        </li>
+        <li class="menu__item">Finder</li>
+        <li class="menu__item">File</li>
+        <li class="menu__item">Edit</li>
+        <li class="menu__item">View</li>
+        <li class="menu__item">Go</li>
+        <li class="menu__item">Window</li>
+        <li class="menu__item">Help</li>
+      </ul>
+      <ul class="utility">
+        <li class="utility__item"><i class="fab fa-bluetooth-b"></i></li>
+        <li class="utility__item"><i class="fas fa-battery-half"></i></li>
+        <li class="utility__item"><i class="fas fa-wifi"></i></li>
+        <li class="utility__item"><i class="fas fa-search"></i></li>
+        <li class="utility__item"></li>
+        <li class="utility__item"></li>
+      </ul>
+    </header>
+    <div class="dock">
+      <ul class="dock__container">
+        <li class="dock__container__item" id="finder">
+          <div class="dock__container__item__name">Finder</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/finder.png"
+            alt="finder"
+          />
+        </li>
+        <li class="dock__container__item" id="notes">
+          <div class="dock__container__item__name">Notes</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/notes.png"
+            alt="notes"
+          />
+        </li>
+        <li
+          class="dock__container__item dock__container__item__active"
+          id="photoBooth"
+        >
+          <div class="dock__container__item__name">Photo Booth</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/photo-booth.png"
+            alt="photo booth"
+          />
+        </li>
+        <li
+          class="dock__container__item dock__container__item__active"
+          id="calculator"
+        >
+          <div class="dock__container__item__name">Calculator</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/calculator.png"
+            alt="calculator"
+          />
+        </li>
+        <li class="dock__container__item" id="terminal">
+          <div class="dock__container__item__name">Terminal</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/terminal.png"
+            alt="terminal"
+          />
+        </li>
+        <li class="dock__container__item" id="preview">
+          <div class="dock__container__item__name">Preview</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/preview.png"
+            alt="preview"
+          />
+        </li>
+        <li class="dock__container__item" id="safari">
+          <div class="dock__container__item__name">Safari</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/safari.png"
+            alt="safari"
+          />
+        </li>
+        <li class="dock__container__item" id="systemPreferences">
+          <div class="dock__container__item__name">System Preferences</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/system-preferences.png"
+            alt="system preferences"
+          />
+        </li>
+        <li
+          class="dock__container__item dock__container__item__active"
+          id="reminders"
+        >
+          <div class="dock__container__item__name">Reminders</div>
+
+          <img
+            class="dock__container__item__ico"
+            src="./icons/reminders.png"
+            alt="reminders"
+          />
+        </li>
+      </ul>
+    </div>
+    <div class="background">
+      <img src="./img/bg.png" alt="background image" />
+    </div>
+  </body>
 </html>

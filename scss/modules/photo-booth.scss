@@ -1,0 +1,49 @@
+@use "../theme/theme" as theme;
+@use "./modal";
+@use "../mixins";
+
+@include modal.setModalStyle("photoBooth");
+
+.modal--photoBooth {
+  .tab--photoBooth {
+    z-index: 1;
+  }
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.photo {
+  &--menu {
+    background-color: theme.$modal-tab;
+    border-top: 1px solid theme.$modal-bottom;
+    width: 100%;
+    height: 3.5rem;
+    position: absolute;
+    bottom: 0;
+
+    @include mixins.flex-center();
+
+    &__btn {
+      width: 2.6rem;
+      height: 2.6rem;
+
+      border-radius: theme.$border-circle;
+      border: 1px solid theme.$modal-bottom;
+      background-color: theme.$video-btn;
+
+      @include mixins.flex-center();
+      cursor: pointer;
+
+      &__stop {
+        width: 1rem;
+        height: 1rem;
+        background-color: theme.$white;
+        border-radius: 0.1rem;
+      }
+    }
+  }
+}
