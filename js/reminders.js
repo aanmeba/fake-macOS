@@ -47,8 +47,9 @@ export const createRemindersEl = () => {
   appendCh(todoListEl, reminders);
   appendCh(todoInput, todoForm);
 
-  if (localStorage.getItem(TODOS_KEY).length !== 0) {
-    const parsedTodos = JSON.parse(localStorage.getItem(TODOS_KEY));
+  const savedTodos = localStorage.getItem(TODOS_KEY);
+  if (savedTodos && savedTodos.length !== 0) {
+    const parsedTodos = JSON.parse(savedTodos);
     todoList = parsedTodos;
     parsedTodos.forEach(printTodo);
   }
