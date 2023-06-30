@@ -46,14 +46,25 @@ export const createRemindersEl = () => {
   appendCh(todoForm, reminders);
   appendCh(todoListEl, reminders);
   appendCh(todoInput, todoForm);
+
+  if (localStorage.getItem(TODOS_KEY).length !== 0) {
+    const parsedTodos = JSON.parse(localStorage.getItem(TODOS_KEY));
+    todoList = parsedTodos;
+    parsedTodos.forEach(printTodo);
+  }
 };
 
+const TODOS_KEY = "todos";
 let todoList = [];
 let completedList = [];
 
 export const runReminders = () => {
   const form = document.querySelector("form");
   form.addEventListener("submit", handleSubmit);
+};
+
+const saveTodo = () => {
+  localStorage.setItem(TODOS_KEY, JSON.stringify(todoList));
 };
 
 const handleSubmit = (e) => {
@@ -65,8 +76,10 @@ const handleSubmit = (e) => {
     id: Date.now(),
   };
   todoList.push(newTodoObj);
+
   clearForm();
   printTodo(newTodoObj);
+  saveTodo();
   todoCounter();
 };
 
@@ -91,6 +104,14 @@ const printTodo = (todoObj) => {
   const checkBtn = createEl("button", "", "reminders__list__item__checkBtn");
   todoItem.setAttribute("id", todoObj.id);
   checkBtn.setAttribute("id", todoObj.id);
+
+  console.log(
+    "--- create elements --- ",
+    todoItem,
+    todoSpan,
+    checkBtn,
+    todoListEl
+  );
   appendCh(checkBtn, todoItem);
   appendCh(todoSpan, todoItem);
   appendCh(todoItem, todoListEl);
@@ -118,4 +139,5 @@ const completeTodo = (parent, id) => {
   // once a button clicked, the rest of button siblings are somehow triggered
   completedList = completedList.filter((c) => c);
   todoCounter();
+  saveTodo();
 };
