@@ -1,18 +1,18 @@
 const getDateTime = () => {
   const utilityItems = document.querySelectorAll(".utility__item");
-  const dateArr = new Date().toDateString().split(" ").slice(0, -1);
-  const date = `${dateArr[0]} ${dateArr[2]} ${dateArr[1]}`;
-  const time = new Date()
-    .toTimeString()
-    .split(" ")[0]
-    .split(":")
-    .slice(0, -1)
-    .join(":");
 
-  const timeEl = utilityItems[utilityItems.length - 1];
-  const dateEl = utilityItems[utilityItems.length - 2];
-  timeEl.innerText = time;
-  dateEl.innerText = date;
+  getDate(utilityItems[utilityItems.length - 2]);
+  getTime(utilityItems[utilityItems.length - 1]);
+};
+
+const getDate = (el) => {
+  const [day, month, date] = new Date().toDateString().split(" ");
+  el.innerText = `${day} ${date} ${month}`;
+};
+
+const getTime = (el) => {
+  const [hour, minute] = new Date().toTimeString().split(":");
+  el.innerText = `${hour}:${minute}`;
 };
 
 export default getDateTime;

@@ -81,7 +81,7 @@ const handleBtnClick = (value) => {
 
 const rerender = () => {
   const display = document.querySelector("#displayResult");
-  const valueLength = currentValue.length;
+  const valueLength = currentValue.toString().length;
   let size;
 
   if (!isCalculating) {
@@ -92,6 +92,7 @@ const rerender = () => {
     size = 30 - valueLength * 0.5;
     display.style.fontSize = size + "px";
   }
+
   display.innerText = currentValue;
 };
 
@@ -154,7 +155,8 @@ const handleCalculation = (num) => {
       total *= num;
       break;
     case "÷":
-      total /= num;
+      isFinite((total /= num)) ? (total /= num) : (total = "Not a number");
+      console.log((total /= num), operator, num, total);
       break;
   }
 };
